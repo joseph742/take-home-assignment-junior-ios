@@ -21,7 +21,7 @@ class APIRequestLoader<T: APIRequest> {
     let apiRequest: T
     let urlSession: URLSession
     
-    init(apiRequest: T, urlSession: URLSession) {
+    init(apiRequest: T, urlSession: URLSession = .shared) {
         self.apiRequest = apiRequest
         self.urlSession = urlSession
     }

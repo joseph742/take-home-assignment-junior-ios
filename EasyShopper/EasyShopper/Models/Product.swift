@@ -24,7 +24,32 @@ struct Product: Decodable {
     var imageUrl: String
     var name: String
     var retailPrice: Int
-    var costPrice: Int?
+}
+
+extension Product: Comparable, Hashable {
+    
+    static func == (lhs: Product, rhs: Product) -> Bool {
+        return lhs.barcode == rhs.barcode
+            && lhs.description == rhs.description
+            && lhs.id == rhs.id
+            && lhs.imageUrl == rhs.imageUrl
+            && lhs.name == rhs.name
+            && lhs.retailPrice == rhs.retailPrice
+    }
+    
+    static func < (lhs: Product, rhs: Product) -> Bool {
+        return lhs.barcode < rhs.barcode
+            || (lhs.barcode == rhs.barcode && lhs.description < rhs.description)
+            || (lhs.barcode == rhs.barcode && lhs.description < rhs.description && lhs.id < rhs.id)
+            || (lhs.barcode == rhs.barcode && lhs.description < rhs.description && lhs.id < rhs.id && lhs.imageUrl < rhs.imageUrl)
+            || (lhs.barcode == rhs.barcode && lhs.description < rhs.description && lhs.id < rhs.id && lhs.imageUrl < rhs.imageUrl && lhs.name < rhs.name)
+            || (lhs.barcode == rhs.barcode && lhs.description < rhs.description && lhs.id < rhs.id && lhs.imageUrl < rhs.imageUrl && lhs.name < rhs.name && lhs.retailPrice < rhs.retailPrice)
+    }
+    
+    func hash(into hasher: inout Hasher) {
+        hasher.combine(id)
+        hasher.combine(name)
+    }
 }
 
 typealias Products = [String: Product]
