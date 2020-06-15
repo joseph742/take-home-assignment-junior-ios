@@ -44,24 +44,39 @@ class ShoppingBasketViewModel {
         self.delegate = delegate
     }
     
-    func count() -> Int {
+    /*
+     Description: returns the number of items in the ShoppingBasket array
+    */
+    func countValue() -> Int {
         return shopBasket.count
     }
     
+    /*
+     Description: removes all elements from the ShoppingBasket and Product array
+    */
     func clearShoppingBasket() {
         shopBasket.removeAll()
         productsArray.removeAll()
         self.delegate?.onFetchCompleted()
     }
     
+    /*
+     Description: returns the character at the specified index from the parameter
+     */
     func product(at index: Int) -> ShoppingBasket {
         shopBasket[index]
     }
     
+    /*
+     Description: returns the total sum of all retailPrice property multiplied by their quantity property of the ShoppingBasket array
+     */
     func totalRetailPrice() -> Int {
-        return shopBasket.reduce(0, {$0 + ($1.retailPrice)})
+        return shopBasket.reduce(0, {$0 + ($1.retailPrice * $1.quantity)})
     }
     
+    /*
+     Description: checks for frequency of items in the ShoppingBasket array to update the quantity property
+     */
     private func calculateOccurances(products: [Product]) -> [ShoppingBasket] {
         productsArray.append(contentsOf: products)
         
@@ -78,8 +93,11 @@ class ShoppingBasketViewModel {
         return productDictionary.map{ ShoppingBasket(id: $0.key.id, imageUrl: $0.key.imageUrl, name: $0.key.name, retailPrice: $0.key.retailPrice, quantity: $0.value) }
     }
     
+    /*
+     Description: appends products to the ShoppingBasket array
+     */
     func appendContents(of products: [Product]) {
-        shopBasket = calculateOccurances(products: products)
+        shopBasket = calculateOccurances(products: products).sorted(by: {$0.name < $1.name})
         self.delegate?.onFetchCompleted()
     }
 }

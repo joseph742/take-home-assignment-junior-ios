@@ -30,6 +30,7 @@ class ShoppingBasketTableViewCell: UITableViewCell {
     @IBOutlet weak var productNameLabel: UILabel!
     @IBOutlet weak var productQuantityLabel: UILabel!
     @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
+    @IBOutlet weak var productPriceLabel: UILabel!
     
     override func prepareForReuse() {
         super.prepareForReuse()
@@ -47,12 +48,13 @@ class ShoppingBasketTableViewCell: UITableViewCell {
     }
     
     /*
-     Description: sets the value for the view objects in the CharacterTableViewCell
+     Description: sets the value for the view objects in the ShoppingBasketTableViewCell
      */
     func configure(with productData: ShoppingBasket?) {
         if let result = productData {
             productNameLabel.text = result.name
-            productQuantityLabel.text = "Qty: \(result.quantity)"
+            productQuantityLabel.text = "\(result.quantity)"
+            productPriceLabel.text = "\(result.retailPrice) DKK"
             guard let imageUrl = URL(string: result.imageUrl) else {
                 return
             }

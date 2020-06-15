@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15702" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="zue-Mg-u56">
-    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <device id="retina5_5" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15704"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -12,7 +12,7 @@
             <objects>
                 <navigationController id="zue-Mg-u56" sceneMemberID="viewController">
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="aov-zX-KuO">
-                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
@@ -23,82 +23,196 @@
             </objects>
             <point key="canvasLocation" x="-61" y="97"/>
         </scene>
-        <!--Shopping Basket View Controller-->
+        <!--Shopping Basket-->
         <scene sceneID="fL4-nE-jaP">
             <objects>
                 <viewController id="W6x-1x-zGm" customClass="ShoppingBasketViewController" customModule="EasyShopper" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="7gC-fo-w80">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" style="large" translatesAutoresizingMaskIntoConstraints="NO" id="rGY-Gh-QJE">
-                                <rect key="frame" x="197" y="407" width="40" height="40"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </activityIndicatorView>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="ADe-Ke-nUc">
-                                <rect key="frame" x="0.0" y="88" width="414" height="700"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="ADe-Ke-nUc">
+                                <rect key="frame" x="0.0" y="44" width="414" height="620.66666666666663"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="shoppingBasketTableViewCell" rowHeight="130" id="ebO-QZ-qu6" customClass="ShoppingBasketTableViewCell" customModule="EasyShopper" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="28" width="414" height="130"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="shoppingBasketTableViewCell" rowHeight="120" id="ebO-QZ-qu6" customClass="ShoppingBasketTableViewCell" customModule="EasyShopper" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="414" height="120"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="ebO-QZ-qu6" id="kCt-3u-bWV">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="130"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="120"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="avatar" translatesAutoresizingMaskIntoConstraints="NO" id="g0u-ex-Mm4">
-                                                    <rect key="frame" x="20" y="11" width="101" height="108"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UiE-iK-h5s">
+                                                    <rect key="frame" x="108" y="11" width="286" height="98"/>
+                                                    <subviews>
+                                                        <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="large" translatesAutoresizingMaskIntoConstraints="NO" id="tR8-ck-17n">
+                                                            <rect key="frame" x="124" y="30.666666666666664" width="37" height="36.999999999999993"/>
+                                                        </activityIndicatorView>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Brand name" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="3ig-Mq-xUk">
+                                                            <rect key="frame" x="8" y="8" width="270" height="20"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="height" relation="lessThanOrEqual" constant="20" id="lZz-gQ-Xj8"/>
+                                                            </constraints>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Quantity" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="UoJ-cp-9bt">
+                                                            <rect key="frame" x="8" y="70" width="127" height="20"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="height" constant="20" id="8TH-lE-Y7M"/>
+                                                            </constraints>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Price" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="K89-l9-vtt">
+                                                            <rect key="frame" x="145" y="70" width="133" height="20"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="height" constant="20" id="cdO-0V-3ei"/>
+                                                            </constraints>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                    </subviews>
+                                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <constraints>
+                                                        <constraint firstItem="tR8-ck-17n" firstAttribute="centerY" secondItem="UiE-iK-h5s" secondAttribute="centerY" id="0c8-c1-kqJ"/>
+                                                        <constraint firstItem="UoJ-cp-9bt" firstAttribute="leading" secondItem="UiE-iK-h5s" secondAttribute="leading" constant="8" id="3al-ri-ObC"/>
+                                                        <constraint firstItem="3ig-Mq-xUk" firstAttribute="leading" secondItem="UiE-iK-h5s" secondAttribute="leading" constant="8" id="3e5-zF-Xje"/>
+                                                        <constraint firstItem="3ig-Mq-xUk" firstAttribute="top" secondItem="UiE-iK-h5s" secondAttribute="top" constant="8" id="7Bz-6N-K5J"/>
+                                                        <constraint firstAttribute="trailing" secondItem="K89-l9-vtt" secondAttribute="trailing" constant="8" id="9UW-Pc-gmz"/>
+                                                        <constraint firstItem="K89-l9-vtt" firstAttribute="leading" secondItem="UoJ-cp-9bt" secondAttribute="trailing" constant="10" id="BAK-pF-gIz"/>
+                                                        <constraint firstItem="UoJ-cp-9bt" firstAttribute="top" secondItem="3ig-Mq-xUk" secondAttribute="bottom" priority="750" constant="42" id="IgL-cg-x3x"/>
+                                                        <constraint firstAttribute="trailing" secondItem="tR8-ck-17n" secondAttribute="trailing" constant="125" id="UBd-Wv-3ym"/>
+                                                        <constraint firstItem="K89-l9-vtt" firstAttribute="top" secondItem="3ig-Mq-xUk" secondAttribute="bottom" priority="750" constant="42" id="VHW-l2-hHn"/>
+                                                        <constraint firstAttribute="bottom" secondItem="K89-l9-vtt" secondAttribute="bottom" constant="8" id="VVt-3M-737"/>
+                                                        <constraint firstAttribute="trailing" secondItem="3ig-Mq-xUk" secondAttribute="trailing" constant="8" id="a22-XR-hYc"/>
+                                                        <constraint firstItem="UoJ-cp-9bt" firstAttribute="width" secondItem="UiE-iK-h5s" secondAttribute="width" multiplier="0.444056" id="eVb-Vo-TFg"/>
+                                                        <constraint firstAttribute="bottom" secondItem="UoJ-cp-9bt" secondAttribute="bottom" constant="8" id="opO-PV-1bG"/>
+                                                        <constraint firstItem="tR8-ck-17n" firstAttribute="leading" secondItem="UiE-iK-h5s" secondAttribute="leading" constant="124" id="tM7-Dy-0ON"/>
+                                                    </constraints>
+                                                </view>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="avatar" translatesAutoresizingMaskIntoConstraints="NO" id="g0u-ex-Mm4">
+                                                    <rect key="frame" x="20" y="17" width="80" height="80"/>
                                                 </imageView>
-                                                <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" style="large" translatesAutoresizingMaskIntoConstraints="NO" id="tR8-ck-17n">
-                                                    <rect key="frame" x="197" y="55" width="40" height="40"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                </activityIndicatorView>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3ig-Mq-xUk">
-                                                    <rect key="frame" x="129" y="11" width="277" height="21"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <nil key="textColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UoJ-cp-9bt">
-                                                    <rect key="frame" x="129" y="55" width="265" height="21"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <nil key="textColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
                                             </subviews>
+                                            <constraints>
+                                                <constraint firstItem="g0u-ex-Mm4" firstAttribute="width" secondItem="kCt-3u-bWV" secondAttribute="width" multiplier="0.193237" id="8TM-5K-BJJ"/>
+                                                <constraint firstItem="UiE-iK-h5s" firstAttribute="leading" secondItem="g0u-ex-Mm4" secondAttribute="trailing" constant="8" id="Gnv-bD-bN5"/>
+                                                <constraint firstItem="UiE-iK-h5s" firstAttribute="top" secondItem="kCt-3u-bWV" secondAttribute="top" constant="11" id="Xuf-8V-8jr"/>
+                                                <constraint firstAttribute="bottom" secondItem="g0u-ex-Mm4" secondAttribute="bottom" constant="23" id="diG-Ki-kDn"/>
+                                                <constraint firstItem="g0u-ex-Mm4" firstAttribute="top" secondItem="kCt-3u-bWV" secondAttribute="top" constant="17" id="fwz-iF-XaD"/>
+                                                <constraint firstAttribute="trailing" secondItem="UiE-iK-h5s" secondAttribute="trailing" constant="20" id="iTi-2o-NoG"/>
+                                                <constraint firstItem="g0u-ex-Mm4" firstAttribute="leading" secondItem="kCt-3u-bWV" secondAttribute="leading" constant="20" id="kOP-Rc-GSo"/>
+                                                <constraint firstAttribute="bottom" secondItem="UiE-iK-h5s" secondAttribute="bottom" constant="11" id="vEt-t6-mwo"/>
+                                            </constraints>
                                         </tableViewCellContentView>
                                         <connections>
                                             <outlet property="activityIndicator" destination="tR8-ck-17n" id="RQt-Fr-QkA"/>
                                             <outlet property="productImageView" destination="g0u-ex-Mm4" id="Wvi-K5-JZ2"/>
                                             <outlet property="productNameLabel" destination="3ig-Mq-xUk" id="aCl-44-cqB"/>
+                                            <outlet property="productPriceLabel" destination="K89-l9-vtt" id="iyp-Ps-7DK"/>
                                             <outlet property="productQuantityLabel" destination="UoJ-cp-9bt" id="pZ1-PE-Hyl"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="IAf-NM-xGl">
-                                <rect key="frame" x="0.0" y="808" width="414" height="54"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="large" translatesAutoresizingMaskIntoConstraints="NO" id="rGY-Gh-QJE">
+                                <rect key="frame" x="141.66666666666666" y="371.66666666666669" width="130.99999999999997" height="37"/>
+                            </activityIndicatorView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IAf-NM-xGl">
+                                <rect key="frame" x="0.0" y="672.66666666666663" width="414" height="63.333333333333371"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BdE-uH-WeG">
-                                        <rect key="frame" x="8" y="17" width="398" height="21"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Total" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BdE-uH-WeG">
+                                        <rect key="frame" x="8" y="8" width="398" height="47.333333333333336"/>
+                                        <accessibility key="accessibilityConfiguration">
+                                            <bool key="isElement" value="NO"/>
+                                        </accessibility>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="isAccessibilityElement" value="YES"/>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="accessibilityIdentifier" value="totalLabel"/>
+                                        </userDefinedRuntimeAttributes>
                                     </label>
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <constraints>
+                                    <constraint firstItem="BdE-uH-WeG" firstAttribute="leading" secondItem="IAf-NM-xGl" secondAttribute="leadingMargin" id="Hze-lg-1Tl"/>
+                                    <constraint firstItem="BdE-uH-WeG" firstAttribute="top" secondItem="IAf-NM-xGl" secondAttribute="topMargin" id="TnX-qH-Xcu"/>
+                                    <constraint firstItem="BdE-uH-WeG" firstAttribute="trailing" secondItem="IAf-NM-xGl" secondAttribute="trailingMargin" id="cRs-hV-ssO"/>
+                                    <constraint firstItem="BdE-uH-WeG" firstAttribute="bottom" secondItem="IAf-NM-xGl" secondAttribute="bottomMargin" id="t4C-aP-Rfz"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="accessibilityIdentifier" value="totalContainer"/>
+                                </userDefinedRuntimeAttributes>
                             </view>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="SNa-5v-Xij" firstAttribute="trailing" secondItem="rGY-Gh-QJE" secondAttribute="trailing" constant="141.5" id="9EX-hV-1nW"/>
+                            <constraint firstItem="SNa-5v-Xij" firstAttribute="trailing" secondItem="rGY-Gh-QJE" secondAttribute="trailing" constant="141.5" id="HMS-Dq-m30"/>
+                            <constraint firstItem="rGY-Gh-QJE" firstAttribute="leading" secondItem="SNa-5v-Xij" secondAttribute="leading" constant="187" id="KSV-QV-JPh"/>
+                            <constraint firstItem="SNa-5v-Xij" firstAttribute="bottom" secondItem="IAf-NM-xGl" secondAttribute="bottom" id="MZj-CW-vli"/>
+                            <constraint firstItem="rGY-Gh-QJE" firstAttribute="centerX" secondItem="SNa-5v-Xij" secondAttribute="centerX" id="Oml-vX-Rsz"/>
+                            <constraint firstItem="SNa-5v-Xij" firstAttribute="trailing" secondItem="IAf-NM-xGl" secondAttribute="trailing" id="PEJ-Vz-s6f"/>
+                            <constraint firstItem="ADe-Ke-nUc" firstAttribute="leading" secondItem="SNa-5v-Xij" secondAttribute="leading" id="QtB-hz-ZM4"/>
+                            <constraint firstItem="rGY-Gh-QJE" firstAttribute="centerY" secondItem="SNa-5v-Xij" secondAttribute="centerY" id="WqR-n6-STw"/>
+                            <constraint firstItem="rGY-Gh-QJE" firstAttribute="leading" secondItem="SNa-5v-Xij" secondAttribute="leading" constant="141.5" id="XgG-Vf-1Jz"/>
+                            <constraint firstItem="IAf-NM-xGl" firstAttribute="height" secondItem="SNa-5v-Xij" secondAttribute="height" multiplier="0.0917313" id="hYQ-ds-cIV"/>
+                            <constraint firstItem="SNa-5v-Xij" firstAttribute="trailing" secondItem="rGY-Gh-QJE" secondAttribute="trailing" constant="187" id="heb-n4-1Tv"/>
+                            <constraint firstItem="ADe-Ke-nUc" firstAttribute="top" secondItem="SNa-5v-Xij" secondAttribute="top" id="i8C-AL-DIt"/>
+                            <constraint firstItem="rGY-Gh-QJE" firstAttribute="leading" secondItem="SNa-5v-Xij" secondAttribute="leading" constant="141.5" id="pJb-3k-MQa"/>
+                            <constraint firstItem="IAf-NM-xGl" firstAttribute="leading" secondItem="SNa-5v-Xij" secondAttribute="leading" id="t2r-gv-JPc"/>
+                            <constraint firstItem="rGY-Gh-QJE" firstAttribute="centerY" secondItem="SNa-5v-Xij" secondAttribute="centerY" id="uMH-jn-d1S"/>
+                            <constraint firstItem="SNa-5v-Xij" firstAttribute="trailing" secondItem="ADe-Ke-nUc" secondAttribute="trailing" id="vbj-do-kEj"/>
+                            <constraint firstItem="IAf-NM-xGl" firstAttribute="top" secondItem="ADe-Ke-nUc" secondAttribute="bottom" constant="8" id="x7A-A9-RdS"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="SNa-5v-Xij"/>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="9EX-hV-1nW"/>
+                                <exclude reference="HMS-Dq-m30"/>
+                                <exclude reference="Oml-vX-Rsz"/>
+                                <exclude reference="XgG-Vf-1Jz"/>
+                                <exclude reference="pJb-3k-MQa"/>
+                                <exclude reference="uMH-jn-d1S"/>
+                            </mask>
+                        </variation>
+                        <variation key="widthClass=compact">
+                            <mask key="constraints">
+                                <include reference="9EX-hV-1nW"/>
+                                <exclude reference="HMS-Dq-m30"/>
+                                <exclude reference="heb-n4-1Tv"/>
+                                <exclude reference="KSV-QV-JPh"/>
+                                <exclude reference="Oml-vX-Rsz"/>
+                                <exclude reference="WqR-n6-STw"/>
+                                <include reference="XgG-Vf-1Jz"/>
+                                <exclude reference="pJb-3k-MQa"/>
+                                <include reference="uMH-jn-d1S"/>
+                            </mask>
+                        </variation>
                     </view>
-                    <navigationItem key="navigationItem" id="1md-QE-wb8"/>
+                    <navigationItem key="navigationItem" title="Shopping Basket" id="1md-QE-wb8">
+                        <barButtonItem key="leftBarButtonItem" title="Clear" id="7sk-sI-mV3">
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="boolean" keyPath="isAccessibilityElement" value="YES"/>
+                                <userDefinedRuntimeAttribute type="string" keyPath="accessibilityIdentifier" value="clearNavigationButton"/>
+                            </userDefinedRuntimeAttributes>
+                            <connections>
+                                <action selector="clearShoppingBasket:" destination="W6x-1x-zGm" id="oAZ-Se-MkQ"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" image="plus" catalog="system" id="IhA-K4-wdG">
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="boolean" keyPath="isAccessibilityElement" value="YES"/>
+                                <userDefinedRuntimeAttribute type="string" keyPath="accessibilityIdentifier" value="addNavigationButton"/>
+                            </userDefinedRuntimeAttributes>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="ShoppingBasketTableView" destination="ADe-Ke-nUc" id="WJg-OH-9Og"/>
                         <outlet property="activityIndicator" destination="rGY-Gh-QJE" id="eJa-ei-9UD"/>
@@ -111,6 +225,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="avatar" width="64" height="64"/>
+        <image name="avatar" width="85.333335876464844" height="85.333335876464844"/>
+        <image name="plus" catalog="system" width="64" height="56"/>
     </resources>
 </document>
