@@ -2,7 +2,7 @@
 //  MockyRestClientTest.swift
 //  EasyShopperTests
 //
-//  Created by Qasim Ahmed on 13/06/2020.
+//  Created by Joseph Umoru on 13/06/2020.
 //  Copyright © 2020 Ka-ching. All rights reserved.
 //
 
@@ -30,7 +30,7 @@ class MockyRestClientTest: XCTestCase {
     }
 
     /*
-     Description: to simulate either success or failure of the testMakeRequest method
+     Description: to simulate either success or failure of the MakeRequest method
      */
     func testMakeRequest() throws {
         let urlRequest = try sut.makeRequest(from: "https://run.mocky.io/v3/4e23865c-b464-4259-83a3-061aaee400ba")
@@ -40,7 +40,7 @@ class MockyRestClientTest: XCTestCase {
     }
     
     /*
-     Description: to simulate either success or failure of the testParseResponse method
+     Description: to simulate either success or failure of the ParseResponse method
      */
     func testParseResponse() throws {
         let jsonData = demoData.data(using: .utf8)!

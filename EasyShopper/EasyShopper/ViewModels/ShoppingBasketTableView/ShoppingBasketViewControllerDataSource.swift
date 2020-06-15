@@ -35,7 +35,7 @@ class ShoppingBasketViewControllerDataSource: NSObject, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return viewModel.count()
+        return viewModel.countValue()
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {

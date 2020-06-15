@@ -3,13 +3,12 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		317447952492AE7000862E28 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 317447942492AE7000862E28 /* AppDelegate.swift */; };
 		317447972492AE7000862E28 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 317447962492AE7000862E28 /* SceneDelegate.swift */; };
-		317447992492AE7000862E28 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 317447982492AE7000862E28 /* ViewController.swift */; };
 		3174479C2492AE7000862E28 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3174479A2492AE7000862E28 /* Main.storyboard */; };
 		3174479E2492AE7200862E28 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3174479D2492AE7200862E28 /* Assets.xcassets */; };
 		317447A12492AE7200862E28 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3174479F2492AE7200862E28 /* LaunchScreen.storyboard */; };
@@ -18,6 +17,14 @@
 		317447AF2492B6DC00862E28 /* Product.swift in Sources */ = {isa = PBXBuildFile; fileRef = 317447AE2492B6DC00862E28 /* Product.swift */; };
 		317447B12492B78A00862E28 /* ShoppingBasket.swift in Sources */ = {isa = PBXBuildFile; fileRef = 317447B02492B78A00862E28 /* ShoppingBasket.swift */; };
 		4F036884B600DAA1EB1D8FF5 /* Pods_EasyShopper.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 596AA39DC04D6401FEB3DA84 /* Pods_EasyShopper.framework */; };
+		5907B397249753A400C2D0EA /* ShoppingBasketViewModelTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5907B396249753A400C2D0EA /* ShoppingBasketViewModelTest.swift */; };
+		5907B39B249756FA00C2D0EA /* MockShoppingBasketViewModelDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5907B39A249756FA00C2D0EA /* MockShoppingBasketViewModelDelegate.swift */; };
+		5907B39D249759B300C2D0EA /* Stubbable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5907B39C249759B300C2D0EA /* Stubbable.swift */; };
+		5907B39F24975A1300C2D0EA /* Product+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5907B39E24975A1300C2D0EA /* Product+Extension.swift */; };
+		5907B3B2249763A900C2D0EA /* XCUIApplication+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5907B3B1249763A900C2D0EA /* XCUIApplication+Extensions.swift */; };
+		5907B3B824976C7F00C2D0EA /* ShoppingBasketViewControllerNavigationItemClearButtonUITest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5907B3B724976C7F00C2D0EA /* ShoppingBasketViewControllerNavigationItemClearButtonUITest.swift */; };
+		5907B3BA24976D6500C2D0EA /* ShoppingBasketViewControllerNavigationItemAddButtonUITest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5907B3B924976D6500C2D0EA /* ShoppingBasketViewControllerNavigationItemAddButtonUITest.swift */; };
+		5907B3BC24976F9100C2D0EA /* ShoppingBasketViewControllerProductTotalLabelUITest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5907B3BB24976F9100C2D0EA /* ShoppingBasketViewControllerProductTotalLabelUITest.swift */; };
 		592E5D6D24955737004BB3E5 /* ShoppingBasketViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 592E5D6C24955737004BB3E5 /* ShoppingBasketViewController.swift */; };
 		592E5D702495661E004BB3E5 /* ShoppingBasketTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 592E5D6F2495661E004BB3E5 /* ShoppingBasketTableViewCell.swift */; };
 		592E5D7324956ED4004BB3E5 /* ShoppingBasketViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 592E5D7224956ED4004BB3E5 /* ShoppingBasketViewModel.swift */; };
@@ -35,6 +42,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		5907B3A9249762BE00C2D0EA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 317447892492AE7000862E28 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 317447902492AE7000862E28;
+			remoteInfo = EasyShopper;
+		};
 		5977C51C2494FAF20009D224 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 317447892492AE7000862E28 /* Project object */;
@@ -48,7 +62,6 @@
 		317447912492AE7000862E28 /* EasyShopper.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EasyShopper.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		317447942492AE7000862E28 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		317447962492AE7000862E28 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		317447982492AE7000862E28 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		3174479B2492AE7000862E28 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		3174479D2492AE7200862E28 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		317447A02492AE7200862E28 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -59,6 +72,16 @@
 		317447B02492B78A00862E28 /* ShoppingBasket.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoppingBasket.swift; sourceTree = "<group>"; };
 		41055EE9B358D1FC7F3E94E3 /* Pods-EasyShopper.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EasyShopper.release.xcconfig"; path = "Target Support Files/Pods-EasyShopper/Pods-EasyShopper.release.xcconfig"; sourceTree = "<group>"; };
 		531761C03C9136637E15B150 /* Pods-EasyShopperTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EasyShopperTests.debug.xcconfig"; path = "Target Support Files/Pods-EasyShopperTests/Pods-EasyShopperTests.debug.xcconfig"; sourceTree = "<group>"; };
+		5907B396249753A400C2D0EA /* ShoppingBasketViewModelTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoppingBasketViewModelTest.swift; sourceTree = "<group>"; };
+		5907B39A249756FA00C2D0EA /* MockShoppingBasketViewModelDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockShoppingBasketViewModelDelegate.swift; sourceTree = "<group>"; };
+		5907B39C249759B300C2D0EA /* Stubbable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Stubbable.swift; sourceTree = "<group>"; };
+		5907B39E24975A1300C2D0EA /* Product+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Product+Extension.swift"; sourceTree = "<group>"; };
+		5907B3A4249762BE00C2D0EA /* EasyShopperUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EasyShopperUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		5907B3A8249762BE00C2D0EA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5907B3B1249763A900C2D0EA /* XCUIApplication+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "XCUIApplication+Extensions.swift"; sourceTree = "<group>"; };
+		5907B3B724976C7F00C2D0EA /* ShoppingBasketViewControllerNavigationItemClearButtonUITest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoppingBasketViewControllerNavigationItemClearButtonUITest.swift; sourceTree = "<group>"; };
+		5907B3B924976D6500C2D0EA /* ShoppingBasketViewControllerNavigationItemAddButtonUITest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoppingBasketViewControllerNavigationItemAddButtonUITest.swift; sourceTree = "<group>"; };
+		5907B3BB24976F9100C2D0EA /* ShoppingBasketViewControllerProductTotalLabelUITest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoppingBasketViewControllerProductTotalLabelUITest.swift; sourceTree = "<group>"; };
 		592E5D6C24955737004BB3E5 /* ShoppingBasketViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoppingBasketViewController.swift; sourceTree = "<group>"; };
 		592E5D6F2495661E004BB3E5 /* ShoppingBasketTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoppingBasketTableViewCell.swift; sourceTree = "<group>"; };
 		592E5D7224956ED4004BB3E5 /* ShoppingBasketViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoppingBasketViewModel.swift; sourceTree = "<group>"; };
@@ -89,6 +112,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		5907B3A1249762BE00C2D0EA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		5977C5142494FAF20009D224 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -105,6 +135,7 @@
 			children = (
 				317447932492AE7000862E28 /* EasyShopper */,
 				5977C5182494FAF20009D224 /* EasyShopperTests */,
+				5907B3A5249762BE00C2D0EA /* EasyShopperUITests */,
 				317447922492AE7000862E28 /* Products */,
 				961AAC2657D92CD6CB690E9A /* Pods */,
 				564CB22610E3EF5BCCD81443 /* Frameworks */,
@@ -116,6 +147,7 @@
 			children = (
 				317447912492AE7000862E28 /* EasyShopper.app */,
 				5977C5172494FAF20009D224 /* EasyShopperTests.xctest */,
+				5907B3A4249762BE00C2D0EA /* EasyShopperUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -133,7 +165,6 @@
 				317447A82492AE8E00862E28 /* DemoData */,
 				317447942492AE7000862E28 /* AppDelegate.swift */,
 				317447962492AE7000862E28 /* SceneDelegate.swift */,
-				317447982492AE7000862E28 /* ViewController.swift */,
 				3174479D2492AE7200862E28 /* Assets.xcassets */,
 				3174479F2492AE7200862E28 /* LaunchScreen.storyboard */,
 				317447A22492AE7200862E28 /* Info.plist */,
@@ -166,6 +197,26 @@
 				F5FD6C5258E33D3B8A09DA16 /* Pods_EasyShopperTests.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		5907B3A5249762BE00C2D0EA /* EasyShopperUITests */ = {
+			isa = PBXGroup;
+			children = (
+				5907B3AE2497637700C2D0EA /* Mocks */,
+				5907B3A8249762BE00C2D0EA /* Info.plist */,
+				5907B3B724976C7F00C2D0EA /* ShoppingBasketViewControllerNavigationItemClearButtonUITest.swift */,
+				5907B3B924976D6500C2D0EA /* ShoppingBasketViewControllerNavigationItemAddButtonUITest.swift */,
+				5907B3BB24976F9100C2D0EA /* ShoppingBasketViewControllerProductTotalLabelUITest.swift */,
+			);
+			path = EasyShopperUITests;
+			sourceTree = "<group>";
+		};
+		5907B3AE2497637700C2D0EA /* Mocks */ = {
+			isa = PBXGroup;
+			children = (
+				5907B3B1249763A900C2D0EA /* XCUIApplication+Extensions.swift */,
+			);
+			path = Mocks;
 			sourceTree = "<group>";
 		};
 		592E5D6B249556F1004BB3E5 /* Controllers */ = {
@@ -236,6 +287,7 @@
 				5977C51B2494FAF20009D224 /* Info.plist */,
 				5977C5212494FBD00009D224 /* MockyRestClientTest.swift */,
 				5977C52C249512490009D224 /* NetworkingUnitTestTests.swift */,
+				5907B396249753A400C2D0EA /* ShoppingBasketViewModelTest.swift */,
 			);
 			path = EasyShopperTests;
 			sourceTree = "<group>";
@@ -244,6 +296,9 @@
 			isa = PBXGroup;
 			children = (
 				5977C52824950CF80009D224 /* MockURLProtocol.swift */,
+				5907B39A249756FA00C2D0EA /* MockShoppingBasketViewModelDelegate.swift */,
+				5907B39C249759B300C2D0EA /* Stubbable.swift */,
+				5907B39E24975A1300C2D0EA /* Product+Extension.swift */,
 			);
 			path = Mocks;
 			sourceTree = "<group>";
@@ -256,7 +311,6 @@
 				531761C03C9136637E15B150 /* Pods-EasyShopperTests.debug.xcconfig */,
 				D9D1DFB0CF601C27B6C29556 /* Pods-EasyShopperTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -281,6 +335,24 @@
 			productName = EasyShopper;
 			productReference = 317447912492AE7000862E28 /* EasyShopper.app */;
 			productType = "com.apple.product-type.application";
+		};
+		5907B3A3249762BE00C2D0EA /* EasyShopperUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5907B3AB249762BE00C2D0EA /* Build configuration list for PBXNativeTarget "EasyShopperUITests" */;
+			buildPhases = (
+				5907B3A0249762BE00C2D0EA /* Sources */,
+				5907B3A1249762BE00C2D0EA /* Frameworks */,
+				5907B3A2249762BE00C2D0EA /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				5907B3AA249762BE00C2D0EA /* PBXTargetDependency */,
+			);
+			name = EasyShopperUITests;
+			productName = EasyShopperUITests;
+			productReference = 5907B3A4249762BE00C2D0EA /* EasyShopperUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 		5977C5162494FAF20009D224 /* EasyShopperTests */ = {
 			isa = PBXNativeTarget;
@@ -314,6 +386,10 @@
 					317447902492AE7000862E28 = {
 						CreatedOnToolsVersion = 11.5;
 					};
+					5907B3A3249762BE00C2D0EA = {
+						CreatedOnToolsVersion = 11.3;
+						TestTargetID = 317447902492AE7000862E28;
+					};
 					5977C5162494FAF20009D224 = {
 						CreatedOnToolsVersion = 11.3;
 						TestTargetID = 317447902492AE7000862E28;
@@ -335,6 +411,7 @@
 			targets = (
 				317447902492AE7000862E28 /* EasyShopper */,
 				5977C5162494FAF20009D224 /* EasyShopperTests */,
+				5907B3A3249762BE00C2D0EA /* EasyShopperUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -347,6 +424,13 @@
 				317447A12492AE7200862E28 /* LaunchScreen.storyboard in Resources */,
 				3174479E2492AE7200862E28 /* Assets.xcassets in Resources */,
 				3174479C2492AE7000862E28 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5907B3A2249762BE00C2D0EA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -438,7 +522,6 @@
 				592E5D6D24955737004BB3E5 /* ShoppingBasketViewController.swift in Sources */,
 				593CF9A524962C7F00DA498D /* KachingTheme.swift in Sources */,
 				317447AA2492AEAA00862E28 /* NetworkServiceMock.swift in Sources */,
-				317447992492AE7000862E28 /* ViewController.swift in Sources */,
 				317447952492AE7000862E28 /* AppDelegate.swift in Sources */,
 				5977C5102494C8F60009D224 /* UIViewController+Present.swift in Sources */,
 				317447B12492B78A00862E28 /* ShoppingBasket.swift in Sources */,
@@ -448,19 +531,39 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		5907B3A0249762BE00C2D0EA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5907B3BC24976F9100C2D0EA /* ShoppingBasketViewControllerProductTotalLabelUITest.swift in Sources */,
+				5907B3BA24976D6500C2D0EA /* ShoppingBasketViewControllerNavigationItemAddButtonUITest.swift in Sources */,
+				5907B3B824976C7F00C2D0EA /* ShoppingBasketViewControllerNavigationItemClearButtonUITest.swift in Sources */,
+				5907B3B2249763A900C2D0EA /* XCUIApplication+Extensions.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		5977C5132494FAF20009D224 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5907B39D249759B300C2D0EA /* Stubbable.swift in Sources */,
 				5977C52924950CF80009D224 /* MockURLProtocol.swift in Sources */,
 				5977C5222494FBD00009D224 /* MockyRestClientTest.swift in Sources */,
+				5907B397249753A400C2D0EA /* ShoppingBasketViewModelTest.swift in Sources */,
+				5907B39F24975A1300C2D0EA /* Product+Extension.swift in Sources */,
 				5977C52D249512490009D224 /* NetworkingUnitTestTests.swift in Sources */,
+				5907B39B249756FA00C2D0EA /* MockShoppingBasketViewModelDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		5907B3AA249762BE00C2D0EA /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 317447902492AE7000862E28 /* EasyShopper */;
+			targetProxy = 5907B3A9249762BE00C2D0EA /* PBXContainerItemProxy */;
+		};
 		5977C51D2494FAF20009D224 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 317447902492AE7000862E28 /* EasyShopper */;
@@ -640,6 +743,44 @@
 			};
 			name = Release;
 		};
+		5907B3AC249762BE00C2D0EA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 579JAP9YP6;
+				INFOPLIST_FILE = EasyShopperUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.teckdk.EasyShopperUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = EasyShopper;
+			};
+			name = Debug;
+		};
+		5907B3AD249762BE00C2D0EA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 579JAP9YP6;
+				INFOPLIST_FILE = EasyShopperUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.teckdk.EasyShopperUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = EasyShopper;
+			};
+			name = Release;
+		};
 		5977C51E2494FAF20009D224 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 531761C03C9136637E15B150 /* Pods-EasyShopperTests.debug.xcconfig */;
@@ -699,6 +840,15 @@
 			buildConfigurations = (
 				317447A62492AE7200862E28 /* Debug */,
 				317447A72492AE7200862E28 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5907B3AB249762BE00C2D0EA /* Build configuration list for PBXNativeTarget "EasyShopperUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5907B3AC249762BE00C2D0EA /* Debug */,
+				5907B3AD249762BE00C2D0EA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

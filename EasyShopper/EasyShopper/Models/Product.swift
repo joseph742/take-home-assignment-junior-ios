@@ -26,7 +26,10 @@ struct Product: Decodable {
     var retailPrice: Int
 }
 
-extension Product: Comparable, Hashable {
+/*
+ Description: conforms to the Equatable and Hashable protocol
+ */
+extension Product: Equatable, Hashable {
     
     static func == (lhs: Product, rhs: Product) -> Bool {
         return lhs.barcode == rhs.barcode
@@ -35,15 +38,6 @@ extension Product: Comparable, Hashable {
             && lhs.imageUrl == rhs.imageUrl
             && lhs.name == rhs.name
             && lhs.retailPrice == rhs.retailPrice
-    }
-    
-    static func < (lhs: Product, rhs: Product) -> Bool {
-        return lhs.barcode < rhs.barcode
-            || (lhs.barcode == rhs.barcode && lhs.description < rhs.description)
-            || (lhs.barcode == rhs.barcode && lhs.description < rhs.description && lhs.id < rhs.id)
-            || (lhs.barcode == rhs.barcode && lhs.description < rhs.description && lhs.id < rhs.id && lhs.imageUrl < rhs.imageUrl)
-            || (lhs.barcode == rhs.barcode && lhs.description < rhs.description && lhs.id < rhs.id && lhs.imageUrl < rhs.imageUrl && lhs.name < rhs.name)
-            || (lhs.barcode == rhs.barcode && lhs.description < rhs.description && lhs.id < rhs.id && lhs.imageUrl < rhs.imageUrl && lhs.name < rhs.name && lhs.retailPrice < rhs.retailPrice)
     }
     
     func hash(into hasher: inout Hasher) {

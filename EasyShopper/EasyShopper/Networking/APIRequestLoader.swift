@@ -2,7 +2,7 @@
 //  APIRequestLoader.swift
 //  EasyShopper
 //
-//  Created by Qasim Ahmed on 13/06/2020.
+//  Created by Joseph Umoru on 13/06/2020.
 //  Copyright © 2020 Ka-ching. All rights reserved.
 //
 
