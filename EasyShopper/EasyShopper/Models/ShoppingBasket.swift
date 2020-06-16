@@ -8,4 +8,19 @@
 
 import Foundation
 
-#warning("Feel free to model a ShoppingBasket any way you like")
+/*
+ Description: A wrapper for the ShoppingBasket data from the MockyRestClient
+ property1: id
+ property2: imageUrl
+ property3: name
+ property4: retailPrice
+ property5: quantity
+*/
+
+struct ShoppingBasket {
+    var id: String
+    var imageUrl: String
+    var name: String
+    var retailPrice: Int
+    var quantity: Int = 1
+}
