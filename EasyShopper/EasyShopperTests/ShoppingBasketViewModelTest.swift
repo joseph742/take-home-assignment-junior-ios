@@ -8,62 +8,36 @@
 
 import XCTest
 @testable import EasyShopper
+
 /*
  Description: A subclass of the XCTestCase class
  property1: loader
  method1: setUp
  method2: tearDown
- method3: testCalculateOccurances
+ method3: testAppendContents
 */
+
 class ShoppingBasketViewModelTest: XCTestCase {
-    var sut: ShoppingBasketViewModel!
+    var sut: MockShoppingBasketViewModel!
     var mockData: [Product]!
     var mockDelegate: MockShoppingBasketViewModelDelegate!
 
     override func setUp() {
         mockDelegate = MockShoppingBasketViewModelDelegate()
-        sut = ShoppingBasketViewModel(delegate: mockDelegate)
+        sut = MockShoppingBasketViewModel(delegate: mockDelegate)
         mockData = [Product.stub(), Product.stub()]
     }
 
     override func tearDown() {
         sut = nil
     }
-
+    
     /*
-     Description: to simulate either success or failure of the calculateOccurances method
+     Description: to simulate call to appendContents method
      */
-    func testCalculateOccurances() {
+    func testAppendContents() {
         sut.appendContents(of: mockData)
-        XCTAssertEqual(sut.countValue(), 1)
         XCTAssertTrue(mockDelegate.onFetchCompletedCalled)
-    }
-    
-    /*
-     Description: to simulate either success or failure of the totalRetailPrice method
-     */
-    func testTotalRetailPrice() {
-        sut.appendContents(of: mockData)
-        XCTAssertEqual(sut.totalRetailPrice(), 800)
-    }
-    
-    /*
-     Description: to simulate either success or failure of the clearShoppingBasket method
-     */
-    func testClearShoppingBasket() {
-        sut.appendContents(of: mockData)
-        sut.clearShoppingBasket()
-        XCTAssertEqual(sut.countValue(), 0)
-        XCTAssertTrue(mockDelegate.onFetchCompletedCalled)
-    }
-    
-    /*
-     Description: to simulate either success or failure of the product method
-     */
-    func testProduct() {
-        sut.appendContents(of: mockData)
-        let firstProduct = sut.product(at: 0)
-        XCTAssertEqual(firstProduct.id, Product.stub().id)
     }
 
 }

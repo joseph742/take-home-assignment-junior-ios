@@ -9,7 +9,7 @@
 import Foundation
 
 /*
- Description: Defines the onReloadTableViewData, onFetchCompleted, onFetchFailed methods
+ Description: Defines the onFetchCompleted methods
  method1: onFetchCompleted
 */
 
@@ -19,23 +19,23 @@ protocol ShoppingBasketViewModelDelegate: class {
 
 /*
  Description: Transform model information into values that can be displayed on the view.
-property1: delegate
-property2: productsArray
-property3: shopBasket
-method1: init
+ property1: delegate
+ property2: productsArray
+ property3: shopBasket
+ method1: init
        parameter1: delegate
-method2: count
-method3: clearShoppingBasket
-method4: product
+ method2: countValue
+ method3: clearShoppingBasket
+ method4: product
        parameter1: index
-method5: totalRetailPrice
-method6: calculateOccurances
+ method5: totalRetailPrice
+ method6: calculateOccurances
        parameter1: products
-method7: appendContents
+ method7: appendContents
        products:
 */
 
-class ShoppingBasketViewModel {
+class ShoppingBasketViewModel: ShoppingBasketViewModelProtocol {
     private weak var delegate: ShoppingBasketViewModelDelegate?
     private var productsArray: [Product] = []
     private var shopBasket: [ShoppingBasket] = []
@@ -68,14 +68,14 @@ class ShoppingBasketViewModel {
     }
     
     /*
-     Description: returns the total sum of all retailPrice property multiplied by their quantity property of the ShoppingBasket array
+     Description: returns the total sum of all retailPrice property multiplied by their quantity property
      */
     func totalRetailPrice() -> Int {
         return shopBasket.reduce(0, {$0 + ($1.retailPrice * $1.quantity)})
     }
     
     /*
-     Description: checks for frequency of items in the ShoppingBasket array to update the quantity property
+     Description: checks for the frequency of items in the ShoppingBasket array to update the quantity property
      */
     private func calculateOccurances(products: [Product]) -> [ShoppingBasket] {
         productsArray.append(contentsOf: products)
