@@ -25,6 +25,8 @@
 		592E5D6D24955737004BB3E5 /* ShoppingBasketViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 592E5D6C24955737004BB3E5 /* ShoppingBasketViewController.swift */; };
 		592E5D702495661E004BB3E5 /* ShoppingBasketTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 592E5D6F2495661E004BB3E5 /* ShoppingBasketTableViewCell.swift */; };
 		592E5D7324956ED4004BB3E5 /* ShoppingBasketViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 592E5D7224956ED4004BB3E5 /* ShoppingBasketViewModel.swift */; };
+		593556C82498F50800F16535 /* URLSession+dataTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = 593556C72498F50800F16535 /* URLSession+dataTask.swift */; };
+		593556CA2498F7DD00F16535 /* MockNetworkSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = 593556C92498F7DD00F16535 /* MockNetworkSession.swift */; };
 		593CF9A2249629E600DA498D /* ShoppingBasketViewControllerDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 593CF9A1249629E600DA498D /* ShoppingBasketViewControllerDataSource.swift */; };
 		593CF9A524962C7F00DA498D /* KachingTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 593CF9A424962C7F00DA498D /* KachingTheme.swift */; };
 		5977C5092494AA7D0009D224 /* MockyRestClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5977C5082494AA7D0009D224 /* MockyRestClient.swift */; };
@@ -91,6 +93,8 @@
 		592E5D6C24955737004BB3E5 /* ShoppingBasketViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoppingBasketViewController.swift; sourceTree = "<group>"; };
 		592E5D6F2495661E004BB3E5 /* ShoppingBasketTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoppingBasketTableViewCell.swift; sourceTree = "<group>"; };
 		592E5D7224956ED4004BB3E5 /* ShoppingBasketViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoppingBasketViewModel.swift; sourceTree = "<group>"; };
+		593556C72498F50800F16535 /* URLSession+dataTask.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "URLSession+dataTask.swift"; sourceTree = "<group>"; };
+		593556C92498F7DD00F16535 /* MockNetworkSession.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockNetworkSession.swift; sourceTree = "<group>"; };
 		593CF9A1249629E600DA498D /* ShoppingBasketViewControllerDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoppingBasketViewControllerDataSource.swift; sourceTree = "<group>"; };
 		593CF9A424962C7F00DA498D /* KachingTheme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KachingTheme.swift; sourceTree = "<group>"; };
 		596AA39DC04D6401FEB3DA84 /* Pods_EasyShopper.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_EasyShopper.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -298,6 +302,7 @@
 			children = (
 				5977C50D2494C8C80009D224 /* HTTPURLResponse+StatusCode.swift */,
 				5977C50F2494C8F60009D224 /* UIViewController+Present.swift */,
+				593556C72498F50800F16535 /* URLSession+dataTask.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -325,6 +330,7 @@
 				599F495A24982ECB0057DDCB /* MockProductsViewModelDelegate.swift */,
 				599F495C249835A00057DDCB /* MockProductsViewModel.swift */,
 				59D072F22498C37200C388E4 /* MockShoppingBasketViewModel.swift */,
+				593556C92498F7DD00F16535 /* MockNetworkSession.swift */,
 			);
 			path = Mocks;
 			sourceTree = "<group>";
@@ -558,6 +564,7 @@
 				5977C5092494AA7D0009D224 /* MockyRestClient.swift in Sources */,
 				59EBCB8C2497C0B600EF58AC /* ProductsViewControllerTableViewDelegate.swift in Sources */,
 				5977C50E2494C8C80009D224 /* HTTPURLResponse+StatusCode.swift in Sources */,
+				593556C82498F50800F16535 /* URLSession+dataTask.swift in Sources */,
 				592E5D6D24955737004BB3E5 /* ShoppingBasketViewController.swift in Sources */,
 				593CF9A524962C7F00DA498D /* KachingTheme.swift in Sources */,
 				317447AA2492AEAA00862E28 /* NetworkServiceMock.swift in Sources */,
@@ -593,6 +600,7 @@
 				5907B39F24975A1300C2D0EA /* Product+Extension.swift in Sources */,
 				5977C52D249512490009D224 /* NetworkingUnitTestTests.swift in Sources */,
 				599F495D249835A00057DDCB /* MockProductsViewModel.swift in Sources */,
+				593556CA2498F7DD00F16535 /* MockNetworkSession.swift in Sources */,
 				599F495B24982ECB0057DDCB /* MockProductsViewModelDelegate.swift in Sources */,
 				599F495924982E720057DDCB /* ProductsViewModelTest.swift in Sources */,
 				5907B39B249756FA00C2D0EA /* MockShoppingBasketViewModelDelegate.swift in Sources */,

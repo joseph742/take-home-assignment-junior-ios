@@ -19,13 +19,11 @@ protocol APIRequest {
     func parseResponse(data: Data) throws -> ResponseDataType
 }
 
-/*
- Description: Handles creating the url instance from string and deserilaztion of data
-*/
+
 class MockyRestClient: APIRequest {
     
     /*
-     Description: Hanldes creating the URL instance from the provided string
+     Description: Handles creating the URL instance from the provided string
      parameters1: data
      */
     func makeRequest(from stringUrl: String) throws -> URLRequest {
