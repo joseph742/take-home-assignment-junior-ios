@@ -9,7 +9,7 @@
 import Foundation
 
 /*
- Description: URLSession conform to the NetworkingSession protocol, hence we call loadData instead of dataTask to fetch data from API endpoint.
+ Description: URLSession conform to the NetworkingSession protocol, hence we call loadData instead of dataTask to fetch data from Mocky API.
  */
 
 extension URLSession: NetworkingSession {

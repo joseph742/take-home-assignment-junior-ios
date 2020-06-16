@@ -35,7 +35,6 @@
 		5977C5102494C8F60009D224 /* UIViewController+Present.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5977C50F2494C8F60009D224 /* UIViewController+Present.swift */; };
 		5977C5222494FBD00009D224 /* MockyRestClientTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5977C5212494FBD00009D224 /* MockyRestClientTest.swift */; };
 		5977C526249504820009D224 /* APIRequestLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5977C525249504820009D224 /* APIRequestLoader.swift */; };
-		5977C52924950CF80009D224 /* MockURLProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5977C52824950CF80009D224 /* MockURLProtocol.swift */; };
 		5977C52D249512490009D224 /* NetworkingUnitTestTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5977C52C249512490009D224 /* NetworkingUnitTestTests.swift */; };
 		599F495924982E720057DDCB /* ProductsViewModelTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 599F495824982E720057DDCB /* ProductsViewModelTest.swift */; };
 		599F495B24982ECB0057DDCB /* MockProductsViewModelDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 599F495A24982ECB0057DDCB /* MockProductsViewModelDelegate.swift */; };
@@ -106,7 +105,6 @@
 		5977C51B2494FAF20009D224 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5977C5212494FBD00009D224 /* MockyRestClientTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockyRestClientTest.swift; sourceTree = "<group>"; };
 		5977C525249504820009D224 /* APIRequestLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIRequestLoader.swift; sourceTree = "<group>"; };
-		5977C52824950CF80009D224 /* MockURLProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockURLProtocol.swift; sourceTree = "<group>"; };
 		5977C52C249512490009D224 /* NetworkingUnitTestTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkingUnitTestTests.swift; sourceTree = "<group>"; };
 		599F495824982E720057DDCB /* ProductsViewModelTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductsViewModelTest.swift; sourceTree = "<group>"; };
 		599F495A24982ECB0057DDCB /* MockProductsViewModelDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockProductsViewModelDelegate.swift; sourceTree = "<group>"; };
@@ -323,7 +321,6 @@
 		5977C52724950CCD0009D224 /* Mocks */ = {
 			isa = PBXGroup;
 			children = (
-				5977C52824950CF80009D224 /* MockURLProtocol.swift */,
 				5907B39A249756FA00C2D0EA /* MockShoppingBasketViewModelDelegate.swift */,
 				5907B39C249759B300C2D0EA /* Stubbable.swift */,
 				5907B39E24975A1300C2D0EA /* Product+Extension.swift */,
@@ -594,7 +591,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				5907B39D249759B300C2D0EA /* Stubbable.swift in Sources */,
-				5977C52924950CF80009D224 /* MockURLProtocol.swift in Sources */,
 				5977C5222494FBD00009D224 /* MockyRestClientTest.swift in Sources */,
 				5907B397249753A400C2D0EA /* ShoppingBasketViewModelTest.swift in Sources */,
 				5907B39F24975A1300C2D0EA /* Product+Extension.swift in Sources */,

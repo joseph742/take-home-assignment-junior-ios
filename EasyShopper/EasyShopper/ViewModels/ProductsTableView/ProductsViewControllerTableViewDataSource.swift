@@ -10,7 +10,7 @@ import UIKit
 
 /*
  Description: Conforms to the UITableViewDataSource protocol and a subclass of NSObject
- propery1: viewModel
+ property1: viewModel
  property2: reusableIdentifier
  method1: init
         parameter1: viewModel

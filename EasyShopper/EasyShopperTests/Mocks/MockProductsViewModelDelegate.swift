@@ -12,6 +12,7 @@ import Foundation
 /*
  Description: A mock class that conforms to the ProductsViewModelDelegate
  property1: onFetchCompletedCalled
+ property2: onFetchFailedCalled
  method1: onFetchCompleted
  method2: onFetchFailed
         parameter1: reason

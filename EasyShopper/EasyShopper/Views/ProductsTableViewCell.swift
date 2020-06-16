@@ -11,10 +11,10 @@ import Kingfisher
 
 /*
  Description: A subclass of the UITableViewCell class
- property1: productImageView
- property2: productNameLabel
- property3: productPriceLabel
- property4: activityIndicator
+ property1: productImage
+ property2: productName
+ property3: productPrice
+ property4: spinner
  method1: prepareForReuse
  method2: awakeFromNib
  method3: setSelected
@@ -25,11 +25,11 @@ method4: configure
 */
 
 class ProductsTableViewCell: UITableViewCell {
-
-    @IBOutlet weak var productImageView: UIImageView!
-    @IBOutlet weak var productNameLabel: UILabel!
-    @IBOutlet weak var productPriceLabel: UILabel!
-    @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
+    
+    @IBOutlet weak var productImage: UIImageView!
+    @IBOutlet weak var productName: UILabel!
+    @IBOutlet weak var productPrice: UILabel!
+    @IBOutlet weak var spinner: UIActivityIndicatorView!
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -44,16 +44,16 @@ class ProductsTableViewCell: UITableViewCell {
      */
     func configure(with productData: Product?) {
         if let result = productData {
-            productNameLabel.text = result.name
-            productPriceLabel.text = "\(result.retailPrice) DKK"
+            productName.text = result.name
+            productPrice.text = "\(result.retailPrice) DKK"
             guard let imageUrl = URL(string: result.imageUrl) else {
                 return
             }
             
-            productImageView.kf.setImage(with: imageUrl)
-            activityIndicator.stopAnimating()
+            productImage.kf.setImage(with: imageUrl)
+            spinner.stopAnimating()
         } else {
-            activityIndicator.startAnimating()
+            spinner.startAnimating()
         }
     }
 

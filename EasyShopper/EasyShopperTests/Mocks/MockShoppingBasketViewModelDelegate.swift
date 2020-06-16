@@ -12,7 +12,7 @@ import Foundation
 /*
  Description: A mock class that conforms to the ShoppingBasketViewModelDelegate
  property1: onFetchCompletedCalled
- method3: onFetchCompleted
+ method1: onFetchCompleted
 */
 
 class MockShoppingBasketViewModelDelegate: ShoppingBasketViewModelDelegate {

@@ -11,7 +11,9 @@ import XCTest
 
 /*
  Description: A subclass of the XCTestCase class
- property1: loader
+ property1: sut
+ property2: mockData
+ property3: mockDelegate
  method1: setUp
  method2: tearDown
  method3: testSuccess
@@ -34,7 +36,7 @@ class ProductsViewModelTest: XCTestCase {
     }
 
     /*
-     Description: to simulate success fetchProducts method
+     Description: simulate the success of the fetchProducts method
      */
     func testSuccess() {
         sut.fetchProducts()
@@ -43,7 +45,7 @@ class ProductsViewModelTest: XCTestCase {
     
     
     /*
-     Description: to simulate failure fetchProducts method
+     Description: simulate the failure of the fetchProducts method
      */
     func testFailure() {
         sut.isSuccessFull = false
