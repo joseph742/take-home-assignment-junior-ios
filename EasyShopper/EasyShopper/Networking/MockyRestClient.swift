@@ -24,7 +24,7 @@ class MockyRestClient: APIRequest {
     
     /*
      Description: Handles creating the URL instance from the provided string
-     parameters1: data
+     parameter1: data
      */
     func makeRequest(from stringUrl: String) throws -> URLRequest {
         guard let mockyUrl = URL(string: stringUrl) else {
@@ -36,7 +36,7 @@ class MockyRestClient: APIRequest {
     
     /*
      Description: Hanldes deserialization from the provided Data
-     parameters1: data
+     parameter1: data
      */
     
     func parseResponse(data: Data) throws -> Products {

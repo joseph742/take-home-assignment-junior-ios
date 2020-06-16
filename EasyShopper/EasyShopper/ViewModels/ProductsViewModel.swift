@@ -8,7 +8,7 @@
 
 import Foundation
 /*
- Description: Defines the onReloadTableViewData, onFetchCompleted, onFetchFailed methods
+ Description: Defines the onFetchCompleted, onFetchFailed methods
  method1: onFetchCompleted
  method2: onFetchFailed
         parameter1: reason
@@ -19,26 +19,27 @@ protocol ProductsViewModelDelegate: class {
 }
 
 /*
- Description: Transform model information into values that can be displayed on the view.
+ Description: Transforms model information into values that can be displayed on the view.
  property1: delegate
  property2: productsArray
  property3: isFetchInProgress
  property4: selectedProductsArray
  method1: init
        parameter1: delegate
- method2: product
+ method2: countValue
+ method3: product
        parameter1: index
- method3: fetchProducts
- method4: addToShoppingBasket
+ method4: fetchProducts
+ method5: addToShoppingBasket
         parameter1: item
- method5: removeFromShoppingBasket
+ method6: removeFromShoppingBasket
         parameter1: item
- method6: selectedProducts
+ method7: selectedProducts
 */
 
 class ProductsViewModel: ProductsViewModelProtocol {
     private weak var delegate: ProductsViewModelDelegate?
-    private var productsArray: [Product] = []
+    private var products: [Product] = []
     private var isFetchInProgress = false
     private var selectedProductsArray: [Product] = []
     
@@ -47,21 +48,21 @@ class ProductsViewModel: ProductsViewModelProtocol {
     }
     
     /*
-     Description: returns the number of items in the Product array
+     Description: returns the number of items in the ProductArray array
     */
     func countValue() -> Int {
-        return productsArray.count
+        return products.count
     }
     
     /*
      Description: returns the character at the specified index from the parameter
      */
     func product(at index: Int) -> Product {
-        productsArray[index]
+        products[index]
     }
     
     /*
-     Description: checks if there is already a fetch in progress before calling making the htttp request to featch products
+     Description: checks if there is already a fetch in progress before calling loadApiRequest method
      */
     func fetchProducts() {
         
@@ -82,7 +83,7 @@ class ProductsViewModel: ProductsViewModelProtocol {
             case .success(let result):
                 DispatchQueue.main.async {
                     self.isFetchInProgress = false
-                    self.productsArray.append(contentsOf: result.values.sorted(by: {$0.name < $1.name}))
+                    self.products.append(contentsOf: result.values.sorted(by: {$0.name < $1.name}))
                     self.delegate?.onFetchCompleted()
                 }
             }
@@ -93,14 +94,14 @@ class ProductsViewModel: ProductsViewModelProtocol {
      Description: appends the selected product at the specified index from the parameter
      */
     func addProductsToShoppingBasket(with id: Int) {
-        selectedProductsArray.append(productsArray[id])
+        selectedProductsArray.append(products[id])
     }
     
     /*
      Description: removes the selected product at the specified index from the parameter
      */
     func removeFromShoppingBasket(with id: Int) {
-        if selectedProductsArray.contains(productsArray[id]) {
+        if selectedProductsArray.contains(products[id]) {
             selectedProductsArray.remove(at: id)
         }
     }

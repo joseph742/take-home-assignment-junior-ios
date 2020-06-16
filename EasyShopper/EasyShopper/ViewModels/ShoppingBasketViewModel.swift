@@ -18,7 +18,7 @@ protocol ShoppingBasketViewModelDelegate: class {
 }
 
 /*
- Description: Transform model information into values that can be displayed on the view.
+ Description: Transforms model information into values that can be displayed on the view.
  property1: delegate
  property2: productsArray
  property3: shopBasket
@@ -37,7 +37,7 @@ protocol ShoppingBasketViewModelDelegate: class {
 
 class ShoppingBasketViewModel: ShoppingBasketViewModelProtocol {
     private weak var delegate: ShoppingBasketViewModelDelegate?
-    private var productsArray: [Product] = []
+    private var products: [Product] = []
     private var shopBasket: [ShoppingBasket] = []
     
     init(delegate: ShoppingBasketViewModelDelegate) {
@@ -52,11 +52,11 @@ class ShoppingBasketViewModel: ShoppingBasketViewModelProtocol {
     }
     
     /*
-     Description: removes all elements from the ShoppingBasket and Product array
+     Description: removes all elements from the shoppingBasket and products array
     */
     func clearShoppingBasket() {
         shopBasket.removeAll()
-        productsArray.removeAll()
+        products.removeAll()
         self.delegate?.onFetchCompleted()
     }
     
@@ -77,27 +77,27 @@ class ShoppingBasketViewModel: ShoppingBasketViewModelProtocol {
     /*
      Description: checks for the frequency of items in the ShoppingBasket array to update the quantity property
      */
-    private func calculateOccurances(products: [Product]) -> [ShoppingBasket] {
-        productsArray.append(contentsOf: products)
+    private func calculateOccurances(selectedProducts: [Product]) -> [ShoppingBasket] {
+        products.append(contentsOf: selectedProducts)
         
-        var productDictionary = [Product: Int]()
+        var productsByID = [Product: Int]()
         
-        for item in productsArray {
-            if let count = productDictionary[item] {
-                productDictionary[item] = count + 1
+        for item in products {
+            if let count = productsByID[item] {
+                productsByID[item] = count + 1
             } else {
-                productDictionary[item] = 1
+                productsByID[item] = 1
             }
         }
         
-        return productDictionary.map{ ShoppingBasket(id: $0.key.id, imageUrl: $0.key.imageUrl, name: $0.key.name, retailPrice: $0.key.retailPrice, quantity: $0.value) }
+        return productsByID.map{ ShoppingBasket(id: $0.key.id, imageUrl: $0.key.imageUrl, name: $0.key.name, retailPrice: $0.key.retailPrice, quantity: $0.value) }
     }
     
     /*
      Description: appends products to the ShoppingBasket array
      */
     func appendContents(of products: [Product]) {
-        shopBasket = calculateOccurances(products: products).sorted(by: {$0.name < $1.name})
+        shopBasket = calculateOccurances(selectedProducts: products).sorted(by: {$0.name < $1.name})
         self.delegate?.onFetchCompleted()
     }
 }

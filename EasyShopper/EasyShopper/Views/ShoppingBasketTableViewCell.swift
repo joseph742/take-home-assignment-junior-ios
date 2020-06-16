@@ -11,37 +11,37 @@ import Kingfisher
 
 /*
  Description: A subclass of the UITableViewCell class
- property1: productImageView
- property2: productNameLabel
- property3: productQuantityLabel
- property4: activityIndicator
- property5: productPriceLabel
+ property1: productImage
+ property2: productName
+ property3: productQuantity
+ property4: spinner
+ property5: productPrice
  method1: prepareForReuse
  method2: awakeFromNib
  method3: setSelected
        parameter1: selected
        parameter2: animated
-method4: configure
+ method4: configure
        parameter: productData
 */
 
 class ShoppingBasketTableViewCell: UITableViewCell {
-
-    @IBOutlet weak var productImageView: UIImageView!
-    @IBOutlet weak var productNameLabel: UILabel!
-    @IBOutlet weak var productQuantityLabel: UILabel!
-    @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
-    @IBOutlet weak var productPriceLabel: UILabel!
+    
+    @IBOutlet weak var productImage: UIImageView!
+    @IBOutlet weak var productName: UILabel!
+    @IBOutlet weak var productQuantity: UILabel!
+    @IBOutlet weak var productPrice: UILabel!
+    @IBOutlet weak var spinner: UIActivityIndicatorView!
     
     override func prepareForReuse() {
         super.prepareForReuse()
         configure(with: .none)
-        productImageView.image = UIImage(named: "avatar")
+        productImage.image = UIImage(named: "avatar")
     }
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        activityIndicator.color = KachingTheme.colorChoice
+        spinner.color = KachingTheme.colorChoice
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
@@ -53,17 +53,17 @@ class ShoppingBasketTableViewCell: UITableViewCell {
      */
     func configure(with productData: ShoppingBasket?) {
         if let result = productData {
-            productNameLabel.text = result.name
-            productQuantityLabel.text = "\(result.quantity)"
-            productPriceLabel.text = "\(result.retailPrice) DKK"
+            productName.text = result.name
+            productQuantity.text = "\(result.quantity)"
+            productPrice.text = "\(result.retailPrice) DKK"
             guard let imageUrl = URL(string: result.imageUrl) else {
                 return
             }
             
-            productImageView.kf.setImage(with: imageUrl)
-            activityIndicator.stopAnimating()
+            productImage.kf.setImage(with: imageUrl)
+            spinner.stopAnimating()
         } else {
-            activityIndicator.startAnimating()
+            spinner.startAnimating()
         }
     }
 

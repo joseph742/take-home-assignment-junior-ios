@@ -10,11 +10,11 @@ import Foundation
 
 /*
  Description: A wrapper for the ShoppingBasket data from the MockyRestClient
- property3: id
- property4: imageUrl
- property5: name
- property6: retailPrice
- property7: quantity
+ property1: id
+ property2: imageUrl
+ property3: name
+ property4: retailPrice
+ property5: quantity
 */
 
 struct ShoppingBasket {

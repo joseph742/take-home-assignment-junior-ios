@@ -12,9 +12,9 @@ import UIKit
 /*
  Description: Defines the showAlertView methods
  method1: showAlertView
-         parameters1: title
-         parameters2: messge
-         parameters3: actions
+         parameter1: title
+         parameter2: messge
+         parameter3: actions
  */
 
 protocol ShowAlert {

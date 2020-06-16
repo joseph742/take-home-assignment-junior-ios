@@ -11,9 +11,9 @@ import UIKit
 /*
  Description: Manages interactions between the view and the underlying data
  property1: CellIdentifiers (private)
- property2: ShoppingBasketTableView
- property3: activityIndicator
- property4: productTotalLabel
+ property2: shoppingBasketTable
+ property3: spinner
+ property4: productTotal
  property5: viewModel
  property6: tableViewDataSource
  method1: clearShoppingBasket
@@ -24,10 +24,10 @@ class ShoppingBasketViewController: UIViewController {
     private enum CellIdentifiers {
       static let list = "shoppingBasketTableViewCell"
     }
-
-    @IBOutlet weak var ShoppingBasketTableView: UITableView!
-    @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
-    @IBOutlet weak var productTotalLabel: UILabel!
+    
+    @IBOutlet weak var shoppingBasketTable: UITableView!
+    @IBOutlet weak var spinner: UIActivityIndicatorView!
+    @IBOutlet weak var productTotal: UILabel!
     
     private var viewModel: ShoppingBasketViewModel!
     var tableViewDataSource: ShoppingBasketViewControllerDataSource?
@@ -36,20 +36,20 @@ class ShoppingBasketViewController: UIViewController {
         super.viewDidLoad()
         view.isAccessibilityElement = false
         view.accessibilityIdentifier = "onboardingView"
-        activityIndicator.color = KachingTheme.colorChoice
-        ShoppingBasketTableView.isHidden = true
-        ShoppingBasketTableView.separatorColor = KachingTheme.colorChoice
+        spinner.color = KachingTheme.colorChoice
+        shoppingBasketTable.isHidden = true
+        shoppingBasketTable.separatorColor = KachingTheme.colorChoice
         viewModel = ShoppingBasketViewModel(delegate: self)
         tableViewDataSource = ShoppingBasketViewControllerDataSource(viewModel: viewModel, reusableIdentifier: CellIdentifiers.list)
-        ShoppingBasketTableView.dataSource = tableViewDataSource
+        shoppingBasketTable.dataSource = tableViewDataSource
     }
 
     @IBAction func clearShoppingBasket(_ sender: UIBarButtonItem) {
         viewModel.clearShoppingBasket()
-        activityIndicator.stopAnimating()
-        ShoppingBasketTableView.reloadData()
-        ShoppingBasketTableView.isHidden = true
-        productTotalLabel.text = "Total"
+        spinner.stopAnimating()
+        shoppingBasketTable.reloadData()
+        shoppingBasketTable.isHidden = true
+        productTotal.text = "Total"
         
     }
     
@@ -68,10 +68,10 @@ class ShoppingBasketViewController: UIViewController {
 */
 extension ShoppingBasketViewController: ShoppingBasketViewModelDelegate {
     func onFetchCompleted() {
-        activityIndicator.stopAnimating()
-        ShoppingBasketTableView.isHidden = false
-        ShoppingBasketTableView.reloadData()
-        productTotalLabel.text = "Total: \(viewModel.totalRetailPrice())"
+        spinner.stopAnimating()
+        shoppingBasketTable.isHidden = false
+        shoppingBasketTable.reloadData()
+        productTotal.text = "Total: \(viewModel.totalRetailPrice())"
     }
 }
 
@@ -81,7 +81,7 @@ extension ShoppingBasketViewController {
     */
     
     func updateShopingBasket(with products: [Product]) {
-        activityIndicator.startAnimating()
+        spinner.startAnimating()
         viewModel.appendContents(of: products)
     }
 }

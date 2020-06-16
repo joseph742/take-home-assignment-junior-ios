@@ -9,6 +9,15 @@
 import Foundation
 @testable import EasyShopper
 
+/*
+ Description: A mock class that conforms to the ShoppingBasketViewModelProtocol
+ property1: delegate
+ method1: init
+        parameter1: delegate
+ method2: appendContents
+        parameter1: products
+*/
+
 class MockShoppingBasketViewModel: ShoppingBasketViewModelProtocol {
     var delegate: ShoppingBasketViewModelDelegate?
     

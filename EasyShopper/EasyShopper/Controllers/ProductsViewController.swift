@@ -11,12 +11,12 @@ import UIKit
 /*
  Description: Manages interactions between the view and the underlying data
  property1: CellIdentifiers (private)
- property2: productsTableView
- property3: activityIndicator
+ property2: productsTable
+ property3: spinner
  property4: viewModel
  property5: tableViewDataSource
  property6: tableViewDelegate
- method1: doneButton
+ method1: done
         parameter1: sender
 */
 
@@ -25,9 +25,10 @@ class ProductsViewController: UIViewController, ShowAlert {
     private enum CellIdentifiers {
       static let list = "ProductsTableViewCellId"
     }
-
-    @IBOutlet weak var productsTableView: UITableView!
-    @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
+    
+    @IBOutlet weak var productsTable: UITableView!
+    @IBOutlet weak var spinner: UIActivityIndicatorView!
+    
     
     private var viewModel: ProductsViewModel!
     var tableViewDataSource: ProductsViewControllerTableViewDataSource?
@@ -39,19 +40,19 @@ class ProductsViewController: UIViewController, ShowAlert {
         super.viewDidLoad()
         view.isAccessibilityElement = false
         view.accessibilityIdentifier = "productsTableView"
-        activityIndicator.color = KachingTheme.colorChoice
-        activityIndicator.startAnimating()
-        productsTableView.isHidden = true
-        productsTableView.separatorColor = KachingTheme.colorChoice
+        spinner.color = KachingTheme.colorChoice
+        spinner.startAnimating()
+        productsTable.isHidden = true
+        productsTable.separatorColor = KachingTheme.colorChoice
         viewModel = ProductsViewModel(delegate: self)
         viewModel.fetchProducts()
         tableViewDataSource = ProductsViewControllerTableViewDataSource(viewModel: viewModel, reusableIdentifier: CellIdentifiers.list)
         tableViewDelegate = ProductsViewControllerTableViewDelegate(viewModel: viewModel)
-        productsTableView.dataSource = tableViewDataSource
-        productsTableView.delegate = tableViewDelegate
+        productsTable.dataSource = tableViewDataSource
+        productsTable.delegate = tableViewDelegate
     }
-
-    @IBAction func doneButton(_ sender: Any) {
+    
+    @IBAction func done(_ sender: Any) {
         self.navigationController?.popViewController(animated: true)
         self.delegate.updateShopingBasket(with: self.viewModel.selectedProducts())
     }
@@ -62,13 +63,13 @@ class ProductsViewController: UIViewController, ShowAlert {
 */
 extension ProductsViewController: ProductsViewModelDelegate {
     func onFetchCompleted() {
-        activityIndicator.stopAnimating()
-        productsTableView.isHidden = false
-        productsTableView.reloadData()
+        spinner.stopAnimating()
+        productsTable.isHidden = false
+        productsTable.reloadData()
     }
     
     func onFetchFailed(with reason: String) {
-        activityIndicator.stopAnimating()
+        spinner.stopAnimating()
         let title = "Warning"
         let action = UIAlertAction(title: "OK", style: .default)
         showAlertView(with: title , message: reason, actions: [action])

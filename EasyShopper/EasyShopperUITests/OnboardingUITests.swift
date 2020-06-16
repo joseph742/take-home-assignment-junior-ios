@@ -46,6 +46,9 @@ class OnboardingUITests: XCTestCase {
         XCTAssertTrue(navAddButton.exists, "Nav add button does not exist.")
         XCTAssertTrue(totalLabel.exists, "Nav add button does not exist.")
         
+        /*
+         Descriptio: tap on navigation add button
+         */
         navAddButton.tap()
         
         /*

@@ -9,10 +9,7 @@
 import Foundation
 
 /*
- Description: Defines the loadApiRequest methods
- method1: onFetchCompleted
-        parameter1: request
-        parameter2: completion
+ Description: Defines the loadData methods
 */
 
 protocol NetworkingSession {
@@ -24,7 +21,7 @@ protocol NetworkingSession {
  property1: apiRequest
  property2: urlSession
  method1: init
-       parameters1: shouldReturnError
+       parameter1: shouldReturnError
  method2: loadApiRequest
 */
 

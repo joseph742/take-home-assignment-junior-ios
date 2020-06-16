@@ -134,11 +134,11 @@
                                             <userDefinedRuntimeAttribute type="string" keyPath="accessibilityIdentifier" value="ShoppingBasketTableViewCell"/>
                                         </userDefinedRuntimeAttributes>
                                         <connections>
-                                            <outlet property="activityIndicator" destination="tR8-ck-17n" id="RQt-Fr-QkA"/>
-                                            <outlet property="productImageView" destination="g0u-ex-Mm4" id="Wvi-K5-JZ2"/>
-                                            <outlet property="productNameLabel" destination="3ig-Mq-xUk" id="aCl-44-cqB"/>
-                                            <outlet property="productPriceLabel" destination="K89-l9-vtt" id="iyp-Ps-7DK"/>
-                                            <outlet property="productQuantityLabel" destination="UoJ-cp-9bt" id="pZ1-PE-Hyl"/>
+                                            <outlet property="productImage" destination="g0u-ex-Mm4" id="RnV-D4-Vyl"/>
+                                            <outlet property="productName" destination="3ig-Mq-xUk" id="HAi-qO-mx6"/>
+                                            <outlet property="productPrice" destination="K89-l9-vtt" id="ufF-uQ-gUl"/>
+                                            <outlet property="productQuantity" destination="UoJ-cp-9bt" id="Yvf-mK-5lj"/>
+                                            <outlet property="spinner" destination="tR8-ck-17n" id="Dbn-cF-RlO"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -245,9 +245,9 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
-                        <outlet property="ShoppingBasketTableView" destination="ADe-Ke-nUc" id="WJg-OH-9Og"/>
-                        <outlet property="activityIndicator" destination="rGY-Gh-QJE" id="eJa-ei-9UD"/>
-                        <outlet property="productTotalLabel" destination="BdE-uH-WeG" id="F92-iw-5SX"/>
+                        <outlet property="productTotal" destination="BdE-uH-WeG" id="5FN-lw-qvX"/>
+                        <outlet property="shoppingBasketTable" destination="ADe-Ke-nUc" id="d3W-Jc-vGX"/>
+                        <outlet property="spinner" destination="rGY-Gh-QJE" id="pNt-8B-XUD"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fqj-GC-a0K" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -349,10 +349,10 @@
                                             <userDefinedRuntimeAttribute type="string" keyPath="accessibilityIdentifier" value="ProductsTableViewCell"/>
                                         </userDefinedRuntimeAttributes>
                                         <connections>
-                                            <outlet property="activityIndicator" destination="c65-5K-jOV" id="UtH-xI-kdj"/>
-                                            <outlet property="productImageView" destination="0OO-im-JfI" id="2Bi-tE-5Bn"/>
-                                            <outlet property="productNameLabel" destination="AcT-L7-WJe" id="rpR-wP-JP7"/>
-                                            <outlet property="productPriceLabel" destination="5Qb-re-bK9" id="r2Y-dS-c0Q"/>
+                                            <outlet property="productImage" destination="0OO-im-JfI" id="e46-jd-EUX"/>
+                                            <outlet property="productName" destination="AcT-L7-WJe" id="SUT-DJ-E7h"/>
+                                            <outlet property="productPrice" destination="5Qb-re-bK9" id="aza-of-wEk"/>
+                                            <outlet property="spinner" destination="c65-5K-jOV" id="YfP-tW-BB5"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -376,7 +376,7 @@
                                             <userDefinedRuntimeAttribute type="string" keyPath="accessibilityIdentifier" value="DoneButton"/>
                                         </userDefinedRuntimeAttributes>
                                         <connections>
-                                            <action selector="doneButton:" destination="yAu-yb-s3Q" eventType="touchUpInside" id="YJi-98-rZU"/>
+                                            <action selector="done:" destination="yAu-yb-s3Q" eventType="touchUpInside" id="Ydz-Xv-kDA"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -433,8 +433,8 @@
                     </view>
                     <navigationItem key="navigationItem" id="KQw-eu-tF4"/>
                     <connections>
-                        <outlet property="activityIndicator" destination="pXN-nK-YME" id="eQi-fj-Ayo"/>
-                        <outlet property="productsTableView" destination="lb2-pQ-H7q" id="k6E-Ic-3hf"/>
+                        <outlet property="productsTable" destination="lb2-pQ-H7q" id="8x9-JS-oUh"/>
+                        <outlet property="spinner" destination="pXN-nK-YME" id="JJO-g8-5vU"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Oik-3R-olO" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
