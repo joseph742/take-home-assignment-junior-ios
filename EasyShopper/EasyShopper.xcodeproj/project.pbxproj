@@ -22,9 +22,6 @@
 		5907B39D249759B300C2D0EA /* Stubbable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5907B39C249759B300C2D0EA /* Stubbable.swift */; };
 		5907B39F24975A1300C2D0EA /* Product+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5907B39E24975A1300C2D0EA /* Product+Extension.swift */; };
 		5907B3B2249763A900C2D0EA /* XCUIApplication+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5907B3B1249763A900C2D0EA /* XCUIApplication+Extensions.swift */; };
-		5907B3B824976C7F00C2D0EA /* ShoppingBasketViewControllerNavigationItemClearButtonUITest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5907B3B724976C7F00C2D0EA /* ShoppingBasketViewControllerNavigationItemClearButtonUITest.swift */; };
-		5907B3BA24976D6500C2D0EA /* ShoppingBasketViewControllerNavigationItemAddButtonUITest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5907B3B924976D6500C2D0EA /* ShoppingBasketViewControllerNavigationItemAddButtonUITest.swift */; };
-		5907B3BC24976F9100C2D0EA /* ShoppingBasketViewControllerProductTotalLabelUITest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5907B3BB24976F9100C2D0EA /* ShoppingBasketViewControllerProductTotalLabelUITest.swift */; };
 		592E5D6D24955737004BB3E5 /* ShoppingBasketViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 592E5D6C24955737004BB3E5 /* ShoppingBasketViewController.swift */; };
 		592E5D702495661E004BB3E5 /* ShoppingBasketTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 592E5D6F2495661E004BB3E5 /* ShoppingBasketTableViewCell.swift */; };
 		592E5D7324956ED4004BB3E5 /* ShoppingBasketViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 592E5D7224956ED4004BB3E5 /* ShoppingBasketViewModel.swift */; };
@@ -38,6 +35,18 @@
 		5977C526249504820009D224 /* APIRequestLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5977C525249504820009D224 /* APIRequestLoader.swift */; };
 		5977C52924950CF80009D224 /* MockURLProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5977C52824950CF80009D224 /* MockURLProtocol.swift */; };
 		5977C52D249512490009D224 /* NetworkingUnitTestTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5977C52C249512490009D224 /* NetworkingUnitTestTests.swift */; };
+		599F495924982E720057DDCB /* ProductsViewModelTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 599F495824982E720057DDCB /* ProductsViewModelTest.swift */; };
+		599F495B24982ECB0057DDCB /* MockProductsViewModelDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 599F495A24982ECB0057DDCB /* MockProductsViewModelDelegate.swift */; };
+		599F495D249835A00057DDCB /* MockProductsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 599F495C249835A00057DDCB /* MockProductsViewModel.swift */; };
+		599F495F249836000057DDCB /* ProductsViewModelProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 599F495E249836000057DDCB /* ProductsViewModelProtocol.swift */; };
+		599F4965249851DD0057DDCB /* OnboardingUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 599F4964249851DD0057DDCB /* OnboardingUITests.swift */; };
+		59D072ED2498C19800C388E4 /* ShoppingBasketViewModelProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59D072EC2498C19800C388E4 /* ShoppingBasketViewModelProtocol.swift */; };
+		59D072F32498C37200C388E4 /* MockShoppingBasketViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59D072F22498C37200C388E4 /* MockShoppingBasketViewModel.swift */; };
+		59EBCB832497930900EF58AC /* ProductsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59EBCB822497930900EF58AC /* ProductsViewController.swift */; };
+		59EBCB85249793B100EF58AC /* ProductsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59EBCB84249793B100EF58AC /* ProductsViewModel.swift */; };
+		59EBCB882497B13000EF58AC /* ProductsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59EBCB872497B13000EF58AC /* ProductsTableViewCell.swift */; };
+		59EBCB8C2497C0B600EF58AC /* ProductsViewControllerTableViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59EBCB8B2497C0B600EF58AC /* ProductsViewControllerTableViewDelegate.swift */; };
+		59EBCB8E2497C0F800EF58AC /* ProductsViewControllerTableViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59EBCB8D2497C0F800EF58AC /* ProductsViewControllerTableViewDataSource.swift */; };
 		5ADBC169DB6F150B4450AE86 /* Pods_EasyShopperTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F5FD6C5258E33D3B8A09DA16 /* Pods_EasyShopperTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -79,9 +88,6 @@
 		5907B3A4249762BE00C2D0EA /* EasyShopperUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EasyShopperUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		5907B3A8249762BE00C2D0EA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5907B3B1249763A900C2D0EA /* XCUIApplication+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "XCUIApplication+Extensions.swift"; sourceTree = "<group>"; };
-		5907B3B724976C7F00C2D0EA /* ShoppingBasketViewControllerNavigationItemClearButtonUITest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoppingBasketViewControllerNavigationItemClearButtonUITest.swift; sourceTree = "<group>"; };
-		5907B3B924976D6500C2D0EA /* ShoppingBasketViewControllerNavigationItemAddButtonUITest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoppingBasketViewControllerNavigationItemAddButtonUITest.swift; sourceTree = "<group>"; };
-		5907B3BB24976F9100C2D0EA /* ShoppingBasketViewControllerProductTotalLabelUITest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoppingBasketViewControllerProductTotalLabelUITest.swift; sourceTree = "<group>"; };
 		592E5D6C24955737004BB3E5 /* ShoppingBasketViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoppingBasketViewController.swift; sourceTree = "<group>"; };
 		592E5D6F2495661E004BB3E5 /* ShoppingBasketTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoppingBasketTableViewCell.swift; sourceTree = "<group>"; };
 		592E5D7224956ED4004BB3E5 /* ShoppingBasketViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoppingBasketViewModel.swift; sourceTree = "<group>"; };
@@ -98,6 +104,18 @@
 		5977C525249504820009D224 /* APIRequestLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIRequestLoader.swift; sourceTree = "<group>"; };
 		5977C52824950CF80009D224 /* MockURLProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockURLProtocol.swift; sourceTree = "<group>"; };
 		5977C52C249512490009D224 /* NetworkingUnitTestTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkingUnitTestTests.swift; sourceTree = "<group>"; };
+		599F495824982E720057DDCB /* ProductsViewModelTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductsViewModelTest.swift; sourceTree = "<group>"; };
+		599F495A24982ECB0057DDCB /* MockProductsViewModelDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockProductsViewModelDelegate.swift; sourceTree = "<group>"; };
+		599F495C249835A00057DDCB /* MockProductsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockProductsViewModel.swift; sourceTree = "<group>"; };
+		599F495E249836000057DDCB /* ProductsViewModelProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductsViewModelProtocol.swift; sourceTree = "<group>"; };
+		599F4964249851DD0057DDCB /* OnboardingUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingUITests.swift; sourceTree = "<group>"; };
+		59D072EC2498C19800C388E4 /* ShoppingBasketViewModelProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoppingBasketViewModelProtocol.swift; sourceTree = "<group>"; };
+		59D072F22498C37200C388E4 /* MockShoppingBasketViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockShoppingBasketViewModel.swift; sourceTree = "<group>"; };
+		59EBCB822497930900EF58AC /* ProductsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductsViewController.swift; sourceTree = "<group>"; };
+		59EBCB84249793B100EF58AC /* ProductsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductsViewModel.swift; sourceTree = "<group>"; };
+		59EBCB872497B13000EF58AC /* ProductsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductsTableViewCell.swift; sourceTree = "<group>"; };
+		59EBCB8B2497C0B600EF58AC /* ProductsViewControllerTableViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductsViewControllerTableViewDelegate.swift; sourceTree = "<group>"; };
+		59EBCB8D2497C0F800EF58AC /* ProductsViewControllerTableViewDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductsViewControllerTableViewDataSource.swift; sourceTree = "<group>"; };
 		AECE03F869A6EB53F766D167 /* Pods-EasyShopper.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EasyShopper.debug.xcconfig"; path = "Target Support Files/Pods-EasyShopper/Pods-EasyShopper.debug.xcconfig"; sourceTree = "<group>"; };
 		D9D1DFB0CF601C27B6C29556 /* Pods-EasyShopperTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EasyShopperTests.release.xcconfig"; path = "Target Support Files/Pods-EasyShopperTests/Pods-EasyShopperTests.release.xcconfig"; sourceTree = "<group>"; };
 		F5FD6C5258E33D3B8A09DA16 /* Pods_EasyShopperTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_EasyShopperTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -204,9 +222,7 @@
 			children = (
 				5907B3AE2497637700C2D0EA /* Mocks */,
 				5907B3A8249762BE00C2D0EA /* Info.plist */,
-				5907B3B724976C7F00C2D0EA /* ShoppingBasketViewControllerNavigationItemClearButtonUITest.swift */,
-				5907B3B924976D6500C2D0EA /* ShoppingBasketViewControllerNavigationItemAddButtonUITest.swift */,
-				5907B3BB24976F9100C2D0EA /* ShoppingBasketViewControllerProductTotalLabelUITest.swift */,
+				599F4964249851DD0057DDCB /* OnboardingUITests.swift */,
 			);
 			path = EasyShopperUITests;
 			sourceTree = "<group>";
@@ -223,6 +239,7 @@
 			isa = PBXGroup;
 			children = (
 				592E5D6C24955737004BB3E5 /* ShoppingBasketViewController.swift */,
+				59EBCB822497930900EF58AC /* ProductsViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -232,6 +249,7 @@
 			children = (
 				3174479A2492AE7000862E28 /* Main.storyboard */,
 				592E5D6F2495661E004BB3E5 /* ShoppingBasketTableViewCell.swift */,
+				59EBCB872497B13000EF58AC /* ProductsTableViewCell.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -239,8 +257,12 @@
 		592E5D7124956E48004BB3E5 /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
+				59EBCB86249793C300EF58AC /* ProductsTableView */,
 				593CF9A02496297A00DA498D /* ShoppingBasketTableView */,
 				592E5D7224956ED4004BB3E5 /* ShoppingBasketViewModel.swift */,
+				59EBCB84249793B100EF58AC /* ProductsViewModel.swift */,
+				599F495E249836000057DDCB /* ProductsViewModelProtocol.swift */,
+				59D072EC2498C19800C388E4 /* ShoppingBasketViewModelProtocol.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -288,6 +310,7 @@
 				5977C5212494FBD00009D224 /* MockyRestClientTest.swift */,
 				5977C52C249512490009D224 /* NetworkingUnitTestTests.swift */,
 				5907B396249753A400C2D0EA /* ShoppingBasketViewModelTest.swift */,
+				599F495824982E720057DDCB /* ProductsViewModelTest.swift */,
 			);
 			path = EasyShopperTests;
 			sourceTree = "<group>";
@@ -299,8 +322,20 @@
 				5907B39A249756FA00C2D0EA /* MockShoppingBasketViewModelDelegate.swift */,
 				5907B39C249759B300C2D0EA /* Stubbable.swift */,
 				5907B39E24975A1300C2D0EA /* Product+Extension.swift */,
+				599F495A24982ECB0057DDCB /* MockProductsViewModelDelegate.swift */,
+				599F495C249835A00057DDCB /* MockProductsViewModel.swift */,
+				59D072F22498C37200C388E4 /* MockShoppingBasketViewModel.swift */,
 			);
 			path = Mocks;
+			sourceTree = "<group>";
+		};
+		59EBCB86249793C300EF58AC /* ProductsTableView */ = {
+			isa = PBXGroup;
+			children = (
+				59EBCB8B2497C0B600EF58AC /* ProductsViewControllerTableViewDelegate.swift */,
+				59EBCB8D2497C0F800EF58AC /* ProductsViewControllerTableViewDataSource.swift */,
+			);
+			path = ProductsTableView;
 			sourceTree = "<group>";
 		};
 		961AAC2657D92CD6CB690E9A /* Pods */ = {
@@ -512,12 +547,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				59EBCB85249793B100EF58AC /* ProductsViewModel.swift in Sources */,
 				5977C526249504820009D224 /* APIRequestLoader.swift in Sources */,
+				59EBCB832497930900EF58AC /* ProductsViewController.swift in Sources */,
 				592E5D702495661E004BB3E5 /* ShoppingBasketTableViewCell.swift in Sources */,
 				592E5D7324956ED4004BB3E5 /* ShoppingBasketViewModel.swift in Sources */,
+				59EBCB882497B13000EF58AC /* ProductsTableViewCell.swift in Sources */,
 				593CF9A2249629E600DA498D /* ShoppingBasketViewControllerDataSource.swift in Sources */,
 				5977C50B2494B3140009D224 /* NetworkResponseError.swift in Sources */,
 				5977C5092494AA7D0009D224 /* MockyRestClient.swift in Sources */,
+				59EBCB8C2497C0B600EF58AC /* ProductsViewControllerTableViewDelegate.swift in Sources */,
 				5977C50E2494C8C80009D224 /* HTTPURLResponse+StatusCode.swift in Sources */,
 				592E5D6D24955737004BB3E5 /* ShoppingBasketViewController.swift in Sources */,
 				593CF9A524962C7F00DA498D /* KachingTheme.swift in Sources */,
@@ -525,8 +564,11 @@
 				317447952492AE7000862E28 /* AppDelegate.swift in Sources */,
 				5977C5102494C8F60009D224 /* UIViewController+Present.swift in Sources */,
 				317447B12492B78A00862E28 /* ShoppingBasket.swift in Sources */,
+				59EBCB8E2497C0F800EF58AC /* ProductsViewControllerTableViewDataSource.swift in Sources */,
+				59D072ED2498C19800C388E4 /* ShoppingBasketViewModelProtocol.swift in Sources */,
 				317447972492AE7000862E28 /* SceneDelegate.swift in Sources */,
 				317447AC2492AEE500862E28 /* DemoData.swift in Sources */,
+				599F495F249836000057DDCB /* ProductsViewModelProtocol.swift in Sources */,
 				317447AF2492B6DC00862E28 /* Product.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -535,9 +577,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5907B3BC24976F9100C2D0EA /* ShoppingBasketViewControllerProductTotalLabelUITest.swift in Sources */,
-				5907B3BA24976D6500C2D0EA /* ShoppingBasketViewControllerNavigationItemAddButtonUITest.swift in Sources */,
-				5907B3B824976C7F00C2D0EA /* ShoppingBasketViewControllerNavigationItemClearButtonUITest.swift in Sources */,
+				599F4965249851DD0057DDCB /* OnboardingUITests.swift in Sources */,
 				5907B3B2249763A900C2D0EA /* XCUIApplication+Extensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -552,7 +592,11 @@
 				5907B397249753A400C2D0EA /* ShoppingBasketViewModelTest.swift in Sources */,
 				5907B39F24975A1300C2D0EA /* Product+Extension.swift in Sources */,
 				5977C52D249512490009D224 /* NetworkingUnitTestTests.swift in Sources */,
+				599F495D249835A00057DDCB /* MockProductsViewModel.swift in Sources */,
+				599F495B24982ECB0057DDCB /* MockProductsViewModelDelegate.swift in Sources */,
+				599F495924982E720057DDCB /* ProductsViewModelTest.swift in Sources */,
 				5907B39B249756FA00C2D0EA /* MockShoppingBasketViewModelDelegate.swift in Sources */,
+				59D072F32498C37200C388E4 /* MockShoppingBasketViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

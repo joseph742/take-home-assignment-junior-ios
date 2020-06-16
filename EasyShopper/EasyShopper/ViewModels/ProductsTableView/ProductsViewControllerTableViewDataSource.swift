@@ -1,8 +1,8 @@
 //
-//  ShoppingBasketViewControllerDataSource.swift
+//  ProductsViewControllerTableViewDataSource.swift
 //  EasyShopper
 //
-//  Created by Joseph Umoru on 14/06/2020.
+//  Created by Joseph Umoru on 15/06/2020.
 //  Copyright © 2020 Ka-ching. All rights reserved.
 //
 
@@ -23,12 +23,11 @@ import UIKit
         parameter2: indexPath
 */
 
-class ShoppingBasketViewControllerDataSource: NSObject, UITableViewDataSource {
-    
-    private var viewModel: ShoppingBasketViewModel!
+class ProductsViewControllerTableViewDataSource: NSObject, UITableViewDataSource {
+    private var viewModel: ProductsViewModel!
     private let reusableIdentifier: String!
     
-    init(viewModel: ShoppingBasketViewModel, reusableIdentifier: String) {
+    init(viewModel: ProductsViewModel, reusableIdentifier: String) {
         self.viewModel = viewModel
         self.reusableIdentifier = reusableIdentifier
         super.init()
@@ -39,9 +38,8 @@ class ShoppingBasketViewControllerDataSource: NSObject, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: reusableIdentifier, for: indexPath) as! ShoppingBasketTableViewCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: reusableIdentifier, for: indexPath) as! ProductsTableViewCell
         cell.configure(with: viewModel.product(at: indexPath.row))
         return cell
     }
-
 }

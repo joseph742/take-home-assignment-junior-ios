@@ -2,7 +2,7 @@
 //  XCUIApplication+Extensions.swift
 //  EasyShopperUITests
 //
-//  Created by Qasim Ahmed on 15/06/2020.
+//  Created by Joseph Umoru on 15/06/2020.
 //  Copyright © 2020 Ka-ching. All rights reserved.
 //
 

@@ -31,7 +31,6 @@ class ShoppingBasketViewController: UIViewController {
     
     private var viewModel: ShoppingBasketViewModel!
     var tableViewDataSource: ShoppingBasketViewControllerDataSource?
-    private var shouldShowLoadingCell = false
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -47,8 +46,20 @@ class ShoppingBasketViewController: UIViewController {
 
     @IBAction func clearShoppingBasket(_ sender: UIBarButtonItem) {
         viewModel.clearShoppingBasket()
+        activityIndicator.stopAnimating()
         ShoppingBasketTableView.reloadData()
+        ShoppingBasketTableView.isHidden = true
+        productTotalLabel.text = "Total"
         
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        guard segue.identifier == "showProductListSegue", let productsViewController = segue.destination as? ProductsViewController
+          else {
+            return
+        }
+        
+        productsViewController.delegate = self
     }
 }
 
@@ -62,6 +73,12 @@ extension ShoppingBasketViewController: ShoppingBasketViewModelDelegate {
         ShoppingBasketTableView.reloadData()
         productTotalLabel.text = "Total: \(viewModel.totalRetailPrice())"
     }
+}
+
+extension ShoppingBasketViewController {
+    /*
+     Description: appends products to the Shopping Basket
+    */
     
     func updateShopingBasket(with products: [Product]) {
         activityIndicator.startAnimating()
