@@ -9,6 +9,17 @@
 import Foundation
 
 /*
+ Description: Defines the loadApiRequest methods
+ method1: onFetchCompleted
+        parameter1: request
+        parameter2: completion
+*/
+
+protocol NetworkingSession {
+    func loadData(with request: URLRequest, completion: @escaping (Data?, URLResponse?, Error?) -> Void)
+}
+
+/*
  Description: Generic class that handles http request to the Mocky API
  property1: apiRequest
  property2: urlSession
@@ -19,9 +30,9 @@ import Foundation
 
 class APIRequestLoader<T: APIRequest> {
     let apiRequest: T
-    let urlSession: URLSession
+    let urlSession: NetworkingSession
     
-    init(apiRequest: T, urlSession: URLSession = .shared) {
+    init(apiRequest: T, urlSession: NetworkingSession = URLSession.shared) {
         self.apiRequest = apiRequest
         self.urlSession = urlSession
     }
@@ -36,8 +47,8 @@ class APIRequestLoader<T: APIRequest> {
         
         do {
             let urlRequest = try apiRequest.makeRequest(from: requestData)
-            URLSession.shared.dataTask(with: urlRequest, completionHandler: {data, response, error in
-                
+            
+            urlSession.loadData(with: urlRequest) { (data, response, error) in
                 guard let httpResponse = response as? HTTPURLResponse, httpResponse.hasSuccessStatusCode, let data = data else {
                     completion(Result.failure(NetworkResponseError.network))
                     return
@@ -49,8 +60,7 @@ class APIRequestLoader<T: APIRequest> {
                 } catch {
                     completion(Result.failure(NetworkResponseError.decoding))
                 }
-                
-            }).resume()
+            }
         } catch  {
             completion(Result.failure(NetworkResponseError.url))
         }

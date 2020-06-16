@@ -18,43 +18,48 @@ import XCTest
 */
 
 class NetworkingUnitTestTests: XCTestCase {
-    var loader: APIRequestLoader<MockyRestClient>!
+    var sut: APIRequestLoader<MockyRestClient>!
+    var request: MockyRestClient!
+    var response: Products!
+    var mockSession: MockNetworkSession!
+    var httpResponse: HTTPURLResponse!
 
     override func setUp() {
-        let request = MockyRestClient()
-        let configuration = URLSessionConfiguration.ephemeral
-        configuration.protocolClasses = [MockURLProtocol.self]
-        let urlSession = URLSession(configuration: configuration)
-        loader = APIRequestLoader(apiRequest: request, urlSession: urlSession)
+        request = MockyRestClient()
+        response = Products()
+        mockSession = MockNetworkSession()
+        let mockJsonData = demoData.data(using: .utf8)
+        httpResponse = HTTPURLResponse()
+        mockSession.data = mockJsonData
+        mockSession.response = httpResponse
+        sut = APIRequestLoader(apiRequest: request, urlSession: mockSession)
     }
 
     override func tearDown() {
-        loader = nil
+        sut = nil
+        request = nil
+        response = nil
+        mockSession = nil
     }
-
+    
     /*
      Description: to simulate success of a network request
      */
     func testAPIRequestLoaderSuccess() {
-        let mockJsonData = demoData.data(using: .utf8)
-        MockURLProtocol.requestHandler = { request in
-            XCTAssertEqual(request.url?.path, "/v3/4e23865c-b464-4259-83a3-061aaee400ba")
-            return (HTTPURLResponse(), mockJsonData, nil)
-        }
-        
-        let expectation = XCTestExpectation(description: "response")
-        loader.loadApiRequest(requestData: "https://run.mocky.io/v3/4e23865c-b464-4259-83a3-061aaee400ba") { (res) in
+        let expectation = self.expectation(description: "Proper response")
+        sut.loadApiRequest(requestData: "https://run.mocky.io/v3/4e23865c-b464-4259-83a3-061aaee400ba") { (res) in
             switch res {
-            case .success(let response):
-                let singleData = response["35423"]
-                XCTAssertTrue(singleData?.id == "35423")
+            case .success(let result):
+                self.response = result
+                expectation.fulfill()
+                
             case .failure(let error):
                 XCTFail(error.reason)
             }
-            expectation.fulfill()
         }
         
-        wait(for: [expectation], timeout: 5)
+        waitForExpectations(timeout: 1, handler: nil)
+        XCTAssertNotNil(response.values)
     }
 
 }
